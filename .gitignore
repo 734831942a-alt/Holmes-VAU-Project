@@ -1,0 +1,54 @@
+# 大型数据集与压缩包
+HIVAU-70k/
+HolmesVAU-master.zip
+examples/
+autodl-tmp/
+
+# 模型权重与检查点
+ckpts/
+checkpoints/
+weights/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# 日志与运行缓存
+*.log
+logs/
+runs/
+wandb/
+.cache/
+tmp/
+temp/
+
+# 编辑器与系统文件
+.idea/
+.vscode/
+.DS_Store
+
+# 密钥与环境变量
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+
+# 常见输出目录
+outputs/
+output/
+results/
+
+# 调试结果
+*_debug.json
+*_errors.csv
+*.swp

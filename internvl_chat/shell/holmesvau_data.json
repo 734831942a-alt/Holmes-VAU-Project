@@ -1,0 +1,9 @@
+{
+  "TrafficAccident": {
+    "root": "/root/autodl-tmp/高架桥数据/video",
+    "annotation": "/root/autodl-tmp/高架桥数据/traffic_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 0
+  }
+}

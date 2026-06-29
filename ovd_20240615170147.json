@@ -1,0 +1,2623 @@
+{
+  "video": "多车事故_20240615170147_突发事件_35706881.mp4",
+  "ok": true,
+  "ovd": {
+    "sum_count": {
+      "car": 192,
+      "truck": 9,
+      "bus": 0,
+      "motorcycle": 3,
+      "person": 25,
+      "traffic cone": 2,
+      "construction vehicle": 10,
+      "road barrier": 3,
+      "debris": 0,
+      "road obstacle": 0,
+      "scattered object": 0
+    },
+    "peak_count": {
+      "car": 19,
+      "truck": 1,
+      "bus": 0,
+      "motorcycle": 1,
+      "person": 4,
+      "traffic cone": 1,
+      "construction vehicle": 3,
+      "road barrier": 1,
+      "debris": 0,
+      "road obstacle": 0,
+      "scattered object": 0
+    },
+    "first_frame": {
+      "car": 0,
+      "truck": 1,
+      "motorcycle": 4,
+      "person": 0,
+      "traffic cone": 1,
+      "construction vehicle": 2,
+      "road barrier": 2
+    },
+    "last_frame": {
+      "car": 11,
+      "truck": 10,
+      "motorcycle": 11,
+      "person": 11,
+      "traffic cone": 2,
+      "construction vehicle": 9,
+      "road barrier": 7
+    },
+    "sampled_frames": 12,
+    "lcrm": {
+      "ok": true,
+      "version": "v2",
+      "primary_signal": "none",
+      "local_pair_score": 0.289,
+      "isolated_stop_score": 0.094,
+      "distributed_congestion_score": 0.877,
+      "local_pair_raw_score": 0.7,
+      "isolated_stop_raw_score": 0.26,
+      "distributed_congestion_raw_score": 0.877,
+      "track_count": 23,
+      "static_count": 2,
+      "slow_count": 21,
+      "moving_count": 0,
+      "global_slow_ratio": 1.0,
+      "vehicle_peak": 19,
+      "semantic_context": {
+        "motorcycle_peak": 1,
+        "traffic_cone_peak": 1,
+        "construction_vehicle_peak": 3,
+        "road_barrier_peak": 1,
+        "debris_peak": 0,
+        "road_obstacle_peak": 0,
+        "motorcycle_context": true,
+        "construction_context": true,
+        "debris_context": false
+      },
+      "slow_region_count": 7,
+      "dominant_slow_region_ratio": 0.619,
+      "min_static_pair_edge_gap_norm": 0.0,
+      "min_static_pair_edge_gap_width": 0.0,
+      "max_pair_close_frames": 11,
+      "max_pair_contact_frames": 4,
+      "best_static_pair": [
+        0,
+        1
+      ],
+      "tracks": [
+        {
+          "track_id": 9,
+          "bucket": "static",
+          "frames": 12,
+          "max_step_norm": 0.0333,
+          "total_disp_norm": 0.0475,
+          "last_center": [
+            0.76,
+            0.174
+          ],
+          "last_box": [
+            1431.1,
+            166.9,
+            1487.7,
+            209.5
+          ]
+        },
+        {
+          "track_id": 11,
+          "bucket": "static",
+          "frames": 12,
+          "max_step_norm": 0.0396,
+          "total_disp_norm": 0.0548,
+          "last_center": [
+            0.787,
+            0.122
+          ],
+          "last_box": [
+            1501.5,
+            121.7,
+            1522.4,
+            141.9
+          ]
+        },
+        {
+          "track_id": 5,
+          "bucket": "slow",
+          "frames": 12,
+          "max_step_norm": 0.0654,
+          "total_disp_norm": 0.1695,
+          "last_center": [
+            0.72,
+            0.163
+          ],
+          "last_box": [
+            1353.5,
+            156.5,
+            1409.6,
+            196.0
+          ]
+        },
+        {
+          "track_id": 6,
+          "bucket": "slow",
+          "frames": 12,
+          "max_step_norm": 0.0731,
+          "total_disp_norm": 0.1184,
+          "last_center": [
+            0.754,
+            0.261
+          ],
+          "last_box": [
+            1391.9,
+            241.4,
+            1502.7,
+            321.8
+          ]
+        },
+        {
+          "track_id": 7,
+          "bucket": "slow",
+          "frames": 12,
+          "max_step_norm": 0.0479,
+          "total_disp_norm": 0.1237,
+          "last_center": [
+            0.798,
+            0.23
+          ],
+          "last_box": [
+            1488.8,
+            209.2,
+            1573.7,
+            287.5
+          ]
+        },
+        {
+          "track_id": 8,
+          "bucket": "slow",
+          "frames": 12,
+          "max_step_norm": 0.0477,
+          "total_disp_norm": 0.0795,
+          "last_center": [
+            0.777,
+            0.128
+          ],
+          "last_box": [
+            1479.0,
+            126.5,
+            1506.4,
+            149.2
+          ]
+        },
+        {
+          "track_id": 10,
+          "bucket": "slow",
+          "frames": 12,
+          "max_step_norm": 0.0528,
+          "total_disp_norm": 0.0996,
+          "last_center": [
+            0.812,
+            0.146
+          ],
+          "last_box": [
+            1543.1,
+            141.6,
+            1575.6,
+            173.2
+          ]
+        },
+        {
+          "track_id": 14,
+          "bucket": "slow",
+          "frames": 12,
+          "max_step_norm": 0.0784,
+          "total_disp_norm": 0.1387,
+          "last_center": [
+            0.686,
+            0.252
+          ],
+          "last_box": [
+            1258.0,
+            229.7,
+            1376.3,
+            314.8
+          ]
+        },
+        {
+          "track_id": 12,
+          "bucket": "slow",
+          "frames": 11,
+          "max_step_norm": 0.0531,
+          "total_disp_norm": 0.0332,
+          "last_center": [
+            0.719,
+            0.223
+          ],
+          "last_box": [
+            1331.4,
+            208.7,
+            1428.5,
+            274.1
+          ]
+        },
+        {
+          "track_id": 3,
+          "bucket": "slow",
+          "frames": 9,
+          "max_step_norm": 0.0661,
+          "total_disp_norm": 0.0953,
+          "last_center": [
+            0.67,
+            0.315
+          ],
+          "last_box": [
+            1225.2,
+            285.9,
+            1349.4,
+            395.4
+          ]
+        },
+        {
+          "track_id": 13,
+          "bucket": "slow",
+          "frames": 9,
+          "max_step_norm": 0.0512,
+          "total_disp_norm": 0.0914,
+          "last_center": [
+            0.825,
+            0.111
+          ],
+          "last_box": [
+            1564.7,
+            99.3,
+            1604.6,
+            141.4
+          ]
+        },
+        {
+          "track_id": 0,
+          "bucket": "slow",
+          "frames": 8,
+          "max_step_norm": 0.0755,
+          "total_disp_norm": 0.1501,
+          "last_center": [
+            0.656,
+            0.483
+          ],
+          "last_box": [
+            1142.8,
+            414.8,
+            1378.0,
+            629.2
+          ]
+        }
+      ]
+    },
+    "vscm": {
+      "static_count": 2,
+      "moving_count": 21,
+      "static_ratio": 0.087,
+      "cluster_center_x_ratio": 0.774,
+      "proximity": true,
+      "proximity_reason": "contact",
+      "contact_frames": 4,
+      "close_frames": 7,
+      "pair_stagnation_frames": 6,
+      "context_frames": 7,
+      "context_hits": {
+        "person": 12
+      },
+      "meaningful_scene_context": true,
+      "scene_only_high_conf": false,
+      "queue_scene_high_conf": false,
+      "queue_contact_high_conf": false,
+      "static_pair_stagnation": false,
+      "static_pair_stagnation_scene": false,
+      "response_static_pair": false,
+      "long_core_static_pair": false,
+      "queue_like_frames": 5,
+      "checked_frames": 12,
+      "queue_like": false,
+      "triggered": false,
+      "motorcycle_peak": 1,
+      "motorcycle_sum": 3,
+      "triggered_before_motorcycle_suppression": true,
+      "suppression_reason": "motorcycle_evidence"
+    },
+    "vscm_debug": null,
+    "sarp": {
+      "ok": true,
+      "triggered": false,
+      "raw_triggered": false,
+      "primary_signal": "none",
+      "suppression_reason": null,
+      "candidate_count": 0,
+      "evidence_frames": 0,
+      "label_hits": {},
+      "semantic_peak": {
+        "car": 19,
+        "construction vehicle": 3,
+        "motorcycle": 1,
+        "person": 4,
+        "road barrier": 1,
+        "traffic cone": 1,
+        "truck": 1
+      },
+      "roi": {
+        "x": [
+          0.03,
+          0.97
+        ],
+        "y": [
+          0.22,
+          0.98
+        ]
+      },
+      "rejected": {
+        "outside_road_roi": 0,
+        "area_out_of_range": 0,
+        "negative_overlap": 0
+      },
+      "examples": [],
+      "candidates": [],
+      "negative_boxes_by_frame": [
+        {
+          "frame": 0,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                285.7,
+                433.5,
+                679.6,
+                692.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                735.0,
+                321.0,
+                955.2,
+                451.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                924.2,
+                591.4,
+                1301.6,
+                948.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1151.4,
+                422.1,
+                1367.5,
+                621.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1162.7,
+                302.8,
+                1304.8,
+                416.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                0.6,
+                937.7,
+                334.2,
+                1078.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1013.0,
+                265.0,
+                1165.6,
+                373.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1442.9,
+                127.0,
+                1479.2,
+                159.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1324.5,
+                161.4,
+                1383.9,
+                204.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1393.9,
+                146.2,
+                1435.7,
+                182.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1536.7,
+                139.3,
+                1577.0,
+                173.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1243.3,
+                242.6,
+                1349.2,
+                323.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1395.2,
+                242.4,
+                1489.9,
+                321.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1483.4,
+                208.7,
+                1573.4,
+                287.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1338.9,
+                193.9,
+                1426.0,
+                266.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1568.9,
+                126.2,
+                1598.1,
+                157.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1493.6,
+                121.2,
+                1518.5,
+                143.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1530.6,
+                117.8,
+                1550.4,
+                133.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1422.8,
+                197.2,
+                1484.3,
+                241.7
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1469.0,
+                210.2,
+                1493.7,
+                269.5
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1437.3,
+                218.9,
+                1461.7,
+                245.6
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 1,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                433.6,
+                381.2,
+                742.6,
+                588.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                183.4,
+                610.8,
+                795.8,
+                1066.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                955.4,
+                447.5,
+                1247.6,
+                760.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                0.3,
+                577.0,
+                390.3,
+                927.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                936.1,
+                347.7,
+                1161.9,
+                503.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1302.4,
+                218.0,
+                1393.2,
+                289.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                923.6,
+                262.1,
+                1087.9,
+                375.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1393.5,
+                238.7,
+                1493.1,
+                321.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1457.6,
+                128.8,
+                1488.5,
+                155.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1341.9,
+                158.7,
+                1398.9,
+                195.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1328.7,
+                191.0,
+                1414.0,
+                246.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1047.5,
+                224.7,
+                1191.0,
+                305.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1515.5,
+                144.7,
+                1561.4,
+                190.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1461.0,
+                183.3,
+                1532.2,
+                230.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1194.1,
+                259.3,
+                1311.5,
+                350.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1482.4,
+                209.2,
+                1573.7,
+                288.2
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1451.1,
+                216.9,
+                1478.4,
+                245.8
+              ]
+            },
+            {
+              "label": "traffic cone",
+              "box": [
+                1021.6,
+                740.7,
+                1045.3,
+                772.1
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1566.9,
+                97.8,
+                1605.8,
+                137.5
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 2,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                64.3,
+                681.7,
+                721.7,
+                1078.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                0.5,
+                486.9,
+                399.7,
+                888.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1392.2,
+                239.5,
+                1489.2,
+                321.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                554.1,
+                904.2,
+                1118.9,
+                1078.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1277.7,
+                227.7,
+                1366.4,
+                305.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                870.8,
+                278.2,
+                1051.3,
+                399.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1158.8,
+                256.8,
+                1295.9,
+                334.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1331.2,
+                161.4,
+                1388.9,
+                205.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1304.3,
+                204.6,
+                1397.8,
+                270.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                973.6,
+                228.9,
+                1148.7,
+                322.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1458.7,
+                128.1,
+                1488.5,
+                154.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1474.5,
+                208.7,
+                1573.5,
+                289.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                619.5,
+                188.5,
+                783.5,
+                248.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1209.7,
+                184.1,
+                1299.3,
+                249.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1499.9,
+                173.6,
+                1560.4,
+                205.6
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                1060.4,
+                505.5,
+                1366.0,
+                808.7
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                435.1,
+                760.3,
+                520.5,
+                870.5
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1211.0,
+                318.6,
+                1262.0,
+                359.6
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                123.3,
+                821.0,
+                231.7,
+                935.9
+              ]
+            },
+            {
+              "label": "road barrier",
+              "box": [
+                248.0,
+                291.6,
+                884.3,
+                550.5
+              ]
+            },
+            {
+              "label": "traffic cone",
+              "box": [
+                1184.9,
+                431.1,
+                1200.2,
+                450.2
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1566.6,
+                98.4,
+                1604.5,
+                137.8
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 3,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                1003.2,
+                512.6,
+                1316.9,
+                805.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                709.6,
+                440.3,
+                1030.3,
+                677.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                8.6,
+                584.3,
+                711.6,
+                1078.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1090.2,
+                267.9,
+                1254.6,
+                399.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1394.4,
+                240.3,
+                1484.9,
+                321.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                698.9,
+                960.0,
+                1243.7,
+                1078.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1333.4,
+                159.2,
+                1390.5,
+                204.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1453.0,
+                129.9,
+                1483.5,
+                156.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1234.3,
+                218.5,
+                1334.4,
+                327.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1487.9,
+                138.1,
+                1535.1,
+                171.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1522.8,
+                156.1,
+                1569.2,
+                194.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1477.0,
+                171.5,
+                1542.0,
+                221.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1336.4,
+                195.6,
+                1432.4,
+                263.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1239.5,
+                180.3,
+                1323.2,
+                239.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1480.3,
+                211.0,
+                1572.7,
+                289.8
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1503.1,
+                236.4,
+                1528.5,
+                307.7
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1380.7,
+                220.3,
+                1398.8,
+                261.4
+              ]
+            },
+            {
+              "label": "road barrier",
+              "box": [
+                468.5,
+                304.4,
+                874.9,
+                477.6
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1566.4,
+                98.2,
+                1603.0,
+                130.7
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 4,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                1228.6,
+                327.8,
+                1393.5,
+                483.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                854.0,
+                285.8,
+                1031.9,
+                393.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                116.6,
+                620.4,
+                826.6,
+                1078.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1215.0,
+                233.7,
+                1325.9,
+                327.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1394.0,
+                239.9,
+                1488.4,
+                321.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1083.9,
+                482.0,
+                1365.5,
+                745.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1096.5,
+                286.2,
+                1248.0,
+                414.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                294.6,
+                434.5,
+                675.2,
+                643.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1524.0,
+                149.7,
+                1566.6,
+                186.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1475.0,
+                162.5,
+                1541.2,
+                215.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1439.0,
+                134.0,
+                1477.8,
+                167.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1479.2,
+                212.6,
+                1573.3,
+                289.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1549.7,
+                136.9,
+                1582.4,
+                167.5
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                882.2,
+                322.6,
+                1132.3,
+                527.3
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                1059.2,
+                206.5,
+                1193.0,
+                312.9
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                1177.3,
+                179.0,
+                1290.1,
+                253.9
+              ]
+            },
+            {
+              "label": "motorcycle",
+              "box": [
+                1392.3,
+                198.2,
+                1419.2,
+                260.6
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1515.1,
+                229.8,
+                1538.4,
+                308.7
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1484.1,
+                213.8,
+                1511.2,
+                300.7
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1566.8,
+                98.8,
+                1604.7,
+                132.7
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 5,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                0.7,
+                801.6,
+                515.7,
+                1078.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1051.2,
+                515.2,
+                1346.9,
+                794.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                697.4,
+                341.3,
+                919.0,
+                478.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1394.3,
+                241.5,
+                1488.3,
+                321.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1461.0,
+                166.4,
+                1514.3,
+                214.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1351.7,
+                192.5,
+                1437.1,
+                259.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1267.2,
+                177.8,
+                1336.2,
+                216.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1543.3,
+                132.2,
+                1583.0,
+                169.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1275.0,
+                265.1,
+                1390.1,
+                382.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1343.6,
+                146.2,
+                1400.5,
+                199.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1477.7,
+                136.3,
+                1517.4,
+                169.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1211.6,
+                343.6,
+                1374.0,
+                487.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1478.5,
+                209.9,
+                1572.4,
+                283.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1242.7,
+                210.9,
+                1362.8,
+                308.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1168.0,
+                205.1,
+                1256.4,
+                276.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1508.5,
+                120.7,
+                1532.3,
+                140.5
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                819.3,
+                380.9,
+                1121.0,
+                614.9
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1526.0,
+                232.0,
+                1552.5,
+                309.6
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1506.3,
+                168.0,
+                1526.3,
+                212.0
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1515.9,
+                232.0,
+                1539.7,
+                306.2
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1502.7,
+                221.2,
+                1531.1,
+                303.6
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1567.3,
+                98.8,
+                1605.8,
+                131.9
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 6,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                141.7,
+                483.3,
+                573.4,
+                720.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                584.4,
+                485.4,
+                947.0,
+                728.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                0.5,
+                726.7,
+                505.8,
+                1078.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1161.0,
+                377.7,
+                1348.0,
+                556.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                856.4,
+                583.3,
+                1266.3,
+                978.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1243.5,
+                233.5,
+                1348.8,
+                312.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1103.4,
+                274.1,
+                1273.8,
+                410.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1338.7,
+                156.5,
+                1398.2,
+                202.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1517.8,
+                146.4,
+                1572.6,
+                184.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1089.2,
+                229.7,
+                1200.6,
+                306.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1393.7,
+                239.5,
+                1488.6,
+                321.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1489.2,
+                209.2,
+                1573.4,
+                287.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1236.8,
+                187.4,
+                1312.9,
+                240.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1436.7,
+                191.8,
+                1516.5,
+                240.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1528.8,
+                117.3,
+                1547.7,
+                134.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1438.1,
+                152.1,
+                1494.3,
+                198.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1408.5,
+                147.5,
+                1447.1,
+                177.2
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                854.9,
+                583.0,
+                1267.0,
+                979.0
+              ]
+            },
+            {
+              "label": "motorcycle",
+              "box": [
+                1492.8,
+                119.7,
+                1515.8,
+                143.9
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1488.4,
+                215.4,
+                1510.5,
+                290.7
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1566.3,
+                98.2,
+                1605.7,
+                139.9
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 7,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                0.4,
+                889.3,
+                469.6,
+                1078.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                796.4,
+                704.7,
+                1243.5,
+                1078.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1008.7,
+                274.5,
+                1141.1,
+                374.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1479.5,
+                209.4,
+                1573.8,
+                287.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1133.7,
+                316.7,
+                1299.4,
+                478.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1270.8,
+                178.2,
+                1339.8,
+                228.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1507.0,
+                158.7,
+                1560.7,
+                196.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1236.8,
+                237.3,
+                1341.5,
+                330.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1391.7,
+                240.2,
+                1495.9,
+                321.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1391.3,
+                154.5,
+                1436.4,
+                186.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1464.0,
+                127.5,
+                1491.0,
+                152.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1550.3,
+                142.9,
+                1584.4,
+                170.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1377.0,
+                182.3,
+                1471.0,
+                246.0
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                643.5,
+                315.8,
+                880.8,
+                491.7
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1374.9,
+                228.2,
+                1404.1,
+                313.0
+              ]
+            },
+            {
+              "label": "road barrier",
+              "box": [
+                1.8,
+                373.4,
+                653.8,
+                662.1
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1566.6,
+                98.2,
+                1603.4,
+                134.0
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 8,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                393.3,
+                571.4,
+                834.4,
+                867.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1032.3,
+                611.2,
+                1395.3,
+                944.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                980.2,
+                356.6,
+                1187.5,
+                506.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1171.0,
+                386.0,
+                1369.4,
+                557.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                812.7,
+                316.1,
+                1006.9,
+                452.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                912.2,
+                268.5,
+                1066.8,
+                367.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1447.5,
+                133.6,
+                1479.9,
+                159.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1298.5,
+                172.6,
+                1364.7,
+                218.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1391.4,
+                239.9,
+                1489.8,
+                321.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1481.3,
+                208.7,
+                1573.7,
+                288.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1545.5,
+                136.0,
+                1578.8,
+                168.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1400.9,
+                187.7,
+                1463.8,
+                210.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1378.9,
+                207.5,
+                1471.8,
+                292.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1486.8,
+                124.3,
+                1512.2,
+                149.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1391.5,
+                188.2,
+                1466.8,
+                238.5
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                1241.0,
+                225.4,
+                1339.8,
+                320.6
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                1129.5,
+                248.6,
+                1281.1,
+                387.2
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1464.3,
+                206.1,
+                1489.9,
+                272.8
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1463.8,
+                206.3,
+                1492.4,
+                306.2
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 9,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                378.9,
+                425.5,
+                741.7,
+                622.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                989.8,
+                346.2,
+                1183.8,
+                490.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1052.4,
+                244.6,
+                1170.4,
+                323.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1235.9,
+                375.3,
+                1418.9,
+                537.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1193.9,
+                258.9,
+                1299.0,
+                345.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1527.8,
+                145.7,
+                1574.3,
+                181.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1359.5,
+                168.7,
+                1418.3,
+                217.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1392.6,
+                237.7,
+                1492.4,
+                321.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1262.3,
+                291.0,
+                1398.3,
+                386.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1443.3,
+                132.6,
+                1475.5,
+                160.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1463.7,
+                169.1,
+                1527.5,
+                221.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1314.5,
+                162.9,
+                1362.1,
+                193.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1304.0,
+                188.6,
+                1401.4,
+                274.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1160.4,
+                199.8,
+                1257.8,
+                268.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1509.9,
+                121.1,
+                1531.1,
+                141.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1480.7,
+                209.6,
+                1572.9,
+                287.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1411.6,
+                133.6,
+                1447.6,
+                172.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1024.0,
+                519.9,
+                1300.1,
+                781.7
+              ]
+            },
+            {
+              "label": "construction vehicle",
+              "box": [
+                856.3,
+                280.1,
+                1031.9,
+                422.7
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1472.4,
+                213.7,
+                1493.6,
+                246.3
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                823.5,
+                294.7,
+                845.4,
+                329.7
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1092.5,
+                586.8,
+                1205.3,
+                644.7
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1564.7,
+                99.3,
+                1604.6,
+                141.4
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 10,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                498.3,
+                467.3,
+                894.6,
+                751.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                790.1,
+                288.1,
+                992.6,
+                424.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1033.4,
+                507.0,
+                1363.0,
+                799.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1260.9,
+                327.9,
+                1394.2,
+                458.9
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1100.8,
+                378.8,
+                1272.3,
+                529.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1095.9,
+                228.7,
+                1216.9,
+                305.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1248.1,
+                249.0,
+                1353.0,
+                325.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1273.1,
+                224.8,
+                1366.9,
+                287.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1477.4,
+                208.8,
+                1573.1,
+                287.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1136.2,
+                275.9,
+                1276.2,
+                379.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1379.4,
+                153.7,
+                1426.1,
+                194.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1453.1,
+                131.2,
+                1481.8,
+                157.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1347.8,
+                174.1,
+                1427.0,
+                233.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1569.8,
+                128.3,
+                1595.4,
+                151.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1393.2,
+                238.6,
+                1491.4,
+                321.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1428.7,
+                135.1,
+                1467.4,
+                169.6
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1375.2,
+                215.6,
+                1404.9,
+                304.7
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1154.0,
+                400.6,
+                1227.3,
+                449.2
+              ]
+            },
+            {
+              "label": "truck",
+              "box": [
+                1566.3,
+                99.1,
+                1606.0,
+                132.0
+              ]
+            }
+          ]
+        },
+        {
+          "frame": 11,
+          "boxes": [
+            {
+              "label": "car",
+              "box": [
+                1.2,
+                527.7,
+                485.9,
+                803.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                0.2,
+                922.4,
+                319.1,
+                1078.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                500.9,
+                369.6,
+                814.2,
+                549.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                760.9,
+                646.3,
+                1214.1,
+                1078.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                568.9,
+                488.0,
+                935.2,
+                776.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1113.7,
+                326.9,
+                1261.9,
+                467.6
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                882.8,
+                300.1,
+                1049.2,
+                446.3
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1431.1,
+                166.9,
+                1487.7,
+                209.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1142.8,
+                414.8,
+                1378.0,
+                629.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1353.5,
+                156.5,
+                1409.6,
+                196.0
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1225.2,
+                285.9,
+                1349.4,
+                395.4
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1173.3,
+                192.8,
+                1273.6,
+                260.7
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1331.4,
+                208.7,
+                1428.5,
+                274.1
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1488.8,
+                209.2,
+                1573.7,
+                287.5
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1258.0,
+                229.7,
+                1376.3,
+                314.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1391.9,
+                241.4,
+                1502.7,
+                321.8
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1479.0,
+                126.5,
+                1506.4,
+                149.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1543.1,
+                141.6,
+                1575.6,
+                173.2
+              ]
+            },
+            {
+              "label": "car",
+              "box": [
+                1501.5,
+                121.7,
+                1522.4,
+                141.9
+              ]
+            },
+            {
+              "label": "motorcycle",
+              "box": [
+                1574.0,
+                127.8,
+                1592.7,
+                154.4
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1162.7,
+                355.2,
+                1225.6,
+                391.8
+              ]
+            },
+            {
+              "label": "person",
+              "box": [
+                1477.5,
+                221.3,
+                1506.0,
+                287.8
+              ]
+            }
+          ]
+        }
+      ],
+      "enhanced": false,
+      "sampled_frames": 12
+    }
+  }
+}
