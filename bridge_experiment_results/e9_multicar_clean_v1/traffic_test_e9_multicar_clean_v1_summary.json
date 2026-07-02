@@ -1,0 +1,67 @@
+{
+  "dataset_protocol": "traffic_e9_multicar_clean_v1",
+  "input_jsonl": "/root/autodl-tmp/高架桥数据/traffic_test.jsonl",
+  "output_clean": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_test_e9_multicar_clean_v1.jsonl",
+  "output_removed": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_test_e9_multicar_clean_v1_removed_multicar.jsonl",
+  "output_uncertain": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_test_e9_multicar_clean_v1_uncertain_multicar.jsonl",
+  "output_unreviewed": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_test_e9_multicar_clean_v1_unreviewed_multicar.jsonl",
+  "uncertain_policy": "separate",
+  "unreviewed_policy": "keep",
+  "stats": {
+    "total": 1214,
+    "gt::占道施工": 296,
+    "non_multicar_kept": 1179,
+    "gt::拥堵": 270,
+    "gt::异常停车": 281,
+    "gt::二轮车辆闯入": 294,
+    "gt::多车事故": 35,
+    "multicar_total": 35,
+    "multicar_yes_kept": 21,
+    "multicar_no_removed": 4,
+    "gt::抛洒物": 38,
+    "multicar_uncertain_separate": 10
+  },
+  "review_reason_counts": {
+    "('yes', 'post_incident_handling')": 11,
+    "('uncertain', 'post_incident_handling_visual_weak')": 8,
+    "('yes', 'collision_visible')": 5,
+    "('no', 'weak_evidence')": 4,
+    "('yes', 'collision_weak')": 3,
+    "('yes', 'post_incident_handling_with_evidence')": 1,
+    "('uncertain', 'far_but_handling')": 1,
+    "('yes', 'damage_trace')": 1,
+    "('uncertain', 'parking_with_person_unspecified')": 1
+  },
+  "counts": {
+    "input": 1214,
+    "clean": 1200,
+    "removed": 4,
+    "uncertain": 10,
+    "unreviewed": 0
+  },
+  "label_distribution": {
+    "input": {
+      "占道施工": 296,
+      "拥堵": 270,
+      "异常停车": 281,
+      "二轮车辆闯入": 294,
+      "多车事故": 35,
+      "抛洒物": 38
+    },
+    "clean": {
+      "占道施工": 296,
+      "拥堵": 270,
+      "异常停车": 281,
+      "二轮车辆闯入": 294,
+      "多车事故": 21,
+      "抛洒物": 38
+    },
+    "removed": {
+      "多车事故": 4
+    },
+    "uncertain": {
+      "多车事故": 10
+    },
+    "unreviewed": {}
+  }
+}

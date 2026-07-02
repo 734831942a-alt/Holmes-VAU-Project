@@ -1,0 +1,71 @@
+{
+  "dataset_protocol": "traffic_e9_multicar_clean_v1",
+  "input_jsonl": "/root/autodl-tmp/高架桥数据/traffic_train.jsonl",
+  "output_clean": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_train_e9_multicar_clean_v1.jsonl",
+  "output_removed": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_train_e9_multicar_clean_v1_removed_multicar.jsonl",
+  "output_uncertain": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_train_e9_multicar_clean_v1_uncertain_multicar.jsonl",
+  "output_unreviewed": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_train_e9_multicar_clean_v1_unreviewed_multicar.jsonl",
+  "uncertain_policy": "separate",
+  "unreviewed_policy": "keep",
+  "stats": {
+    "total": 4853,
+    "gt::二轮车辆闯入": 1170,
+    "non_multicar_kept": 4712,
+    "gt::占道施工": 1101,
+    "gt::拥堵": 1223,
+    "gt::异常停车": 1093,
+    "gt::抛洒物": 125,
+    "gt::多车事故": 141,
+    "multicar_total": 141,
+    "multicar_yes_kept": 87,
+    "multicar_uncertain_separate": 44,
+    "multicar_no_removed": 10
+  },
+  "review_reason_counts": {
+    "('yes', 'post_incident_handling')": 60,
+    "('uncertain', 'post_incident_handling_visual_weak')": 35,
+    "('yes', 'collision_visible')": 10,
+    "('yes', 'post_incident_handling_with_evidence')": 10,
+    "('uncertain', 'far_but_handling')": 6,
+    "('no', 'parking_no_person_no_evidence')": 5,
+    "('yes', 'collision_weak')": 5,
+    "('no', 'weak_evidence')": 4,
+    "('yes', 'damage_trace')": 2,
+    "('no', 'cannot_see_target')": 1,
+    "('uncertain', 'handling_relation_unclear')": 1,
+    "('uncertain', 'single_vehicle_but_evidence')": 1,
+    "('uncertain', 'other')": 1
+  },
+  "counts": {
+    "input": 4853,
+    "clean": 4799,
+    "removed": 10,
+    "uncertain": 44,
+    "unreviewed": 0
+  },
+  "label_distribution": {
+    "input": {
+      "二轮车辆闯入": 1170,
+      "占道施工": 1101,
+      "拥堵": 1223,
+      "异常停车": 1093,
+      "抛洒物": 125,
+      "多车事故": 141
+    },
+    "clean": {
+      "二轮车辆闯入": 1170,
+      "占道施工": 1101,
+      "拥堵": 1223,
+      "异常停车": 1093,
+      "抛洒物": 125,
+      "多车事故": 87
+    },
+    "removed": {
+      "多车事故": 10
+    },
+    "uncertain": {
+      "多车事故": 44
+    },
+    "unreviewed": {}
+  }
+}

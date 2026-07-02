@@ -1,0 +1,140 @@
+{
+  "input_file": "/root/autodl-tmp/高架桥数据/traffic_test_full_pred.jsonl",
+  "labels": [
+    "拥堵",
+    "异常停车",
+    "占道施工",
+    "交通事故",
+    "二轮闯入",
+    "行人闯入"
+  ],
+  "total_records": 1214,
+  "valid_records_for_classification": 895,
+  "unknown_gt_count": 319,
+  "unknown_pred_count": 17,
+  "multiclass_detection": {
+    "accuracy": 0.43798882681564244,
+    "macro_f1": 0.19674664444607834,
+    "per_class": {
+      "拥堵": {
+        "precision": 0.6324786324786325,
+        "recall": 0.4277456647398844,
+        "f1": 0.510344827586207,
+        "support": 519
+      },
+      "异常停车": {
+        "precision": 0.2975206611570248,
+        "recall": 0.6666666666666666,
+        "f1": 0.4114285714285715,
+        "support": 216
+      },
+      "占道施工": {
+        "precision": 0.43333333333333335,
+        "recall": 0.18439716312056736,
+        "f1": 0.25870646766169153,
+        "support": 141
+      },
+      "交通事故": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 19
+      },
+      "二轮闯入": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "行人闯入": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      }
+    },
+    "confusion_matrix": {
+      "拥堵": {
+        "拥堵": 222,
+        "异常停车": 266,
+        "占道施工": 31,
+        "交通事故": 0,
+        "二轮闯入": 0,
+        "行人闯入": 0
+      },
+      "异常停车": {
+        "拥堵": 69,
+        "异常停车": 144,
+        "占道施工": 3,
+        "交通事故": 0,
+        "二轮闯入": 0,
+        "行人闯入": 0
+      },
+      "占道施工": {
+        "拥堵": 55,
+        "异常停车": 60,
+        "占道施工": 26,
+        "交通事故": 0,
+        "二轮闯入": 0,
+        "行人闯入": 0
+      },
+      "交通事故": {
+        "拥堵": 5,
+        "异常停车": 14,
+        "占道施工": 0,
+        "交通事故": 0,
+        "二轮闯入": 0,
+        "行人闯入": 0
+      },
+      "二轮闯入": {
+        "拥堵": 0,
+        "异常停车": 0,
+        "占道施工": 0,
+        "交通事故": 0,
+        "二轮闯入": 0,
+        "行人闯入": 0
+      },
+      "行人闯入": {
+        "拥堵": 0,
+        "异常停车": 0,
+        "占道施工": 0,
+        "交通事故": 0,
+        "二轮闯入": 0,
+        "行人闯入": 0
+      }
+    }
+  },
+  "explanation_metrics": {
+    "rouge_l_f1_mean": 0.3567811786524551,
+    "bertscore_f1_mean": 0.7512566447257996,
+    "bertscore_error": null,
+    "field_hit_metrics": {
+      "accident_type": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "location": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "lighting": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "cause": {
+        "hit": 0,
+        "count_with_gt": 675,
+        "hit_rate": 0.0
+      },
+      "impact": {
+        "hit": 0,
+        "count_with_gt": 797,
+        "hit_rate": 0.0
+      }
+    }
+  },
+  "num_errors": 503
+}

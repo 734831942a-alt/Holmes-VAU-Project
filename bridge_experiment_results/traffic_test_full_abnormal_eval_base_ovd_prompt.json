@@ -1,0 +1,49 @@
+{
+  "input_file": "/root/autodl-tmp/高架桥数据/traffic_test_full_pred_base_ovd_prompt.jsonl",
+  "labels": [
+    "拥堵",
+    "异常停车",
+    "占道施工",
+    "交通事故",
+    "二轮闯入",
+    "行人闯入"
+  ],
+  "total_records": 1214,
+  "valid_records_for_classification": 0,
+  "unknown_gt_count": 1214,
+  "unknown_pred_count": 0,
+  "multiclass_detection": {},
+  "explanation_metrics": {
+    "rouge_l_f1_mean": 0.0,
+    "bertscore_f1_mean": null,
+    "bertscore_error": null,
+    "field_hit_metrics": {
+      "accident_type": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "location": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "lighting": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "cause": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "impact": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      }
+    }
+  },
+  "num_errors": 0
+}

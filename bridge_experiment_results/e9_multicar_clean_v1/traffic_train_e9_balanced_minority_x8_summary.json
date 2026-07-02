@@ -1,0 +1,50 @@
+{
+  "input": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_train_e9_multicar_clean_v1.jsonl",
+  "output": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/traffic_train_e9_balanced_minority_x8.jsonl",
+  "seed": 2026,
+  "repeat_by_label": {
+    "多车事故": 8,
+    "抛洒物": 8
+  },
+  "total_output": 6283,
+  "label_summary": {
+    "二轮车辆闯入": {
+      "input_unique": 1170,
+      "repeat": 1,
+      "output": 1170
+    },
+    "占道施工": {
+      "input_unique": 1101,
+      "repeat": 1,
+      "output": 1101
+    },
+    "拥堵": {
+      "input_unique": 1223,
+      "repeat": 1,
+      "output": 1223
+    },
+    "异常停车": {
+      "input_unique": 1093,
+      "repeat": 1,
+      "output": 1093
+    },
+    "抛洒物": {
+      "input_unique": 125,
+      "repeat": 8,
+      "output": 1000
+    },
+    "多车事故": {
+      "input_unique": 87,
+      "repeat": 8,
+      "output": 696
+    }
+  },
+  "output_dist": {
+    "二轮车辆闯入": 1170,
+    "抛洒物": 1000,
+    "拥堵": 1223,
+    "占道施工": 1101,
+    "异常停车": 1093,
+    "多车事故": 696
+  }
+}

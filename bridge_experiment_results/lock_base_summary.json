@@ -1,0 +1,14 @@
+{
+  "total": 1214,
+  "ok": 1214,
+  "failed": 0,
+  "exact_match_rate": 0.0,
+  "contain_match_rate": 0.0,
+  "meta": "/root/autodl-tmp/高架桥数据/traffic_meta.json",
+  "test_jsonl": "/root/autodl-tmp/高架桥数据/traffic_test.jsonl",
+  "model_path": "/root/autodl-tmp/HolmesVAU-master/ckpts/HolmesVAU_lora_balanced",
+  "sampler_path": "/root/autodl-tmp/HolmesVAU-master/holmesvau/ATS/anomaly_scorer.pth",
+  "select_frames": 12,
+  "use_ats": false,
+  "output_jsonl": "/root/autodl-tmp/高架桥数据/lock_base_pred.jsonl"
+}

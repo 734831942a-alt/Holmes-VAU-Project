@@ -1,0 +1,44 @@
+{
+  "二轮车辆闯入": {
+    "root": "/root/autodl-tmp/高架桥数据/video_fixed",
+    "annotation": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/strong5_fewshot_v1/by_class_train_e9_strong5_boundary/二轮车辆闯入.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 1170
+  },
+  "占道施工": {
+    "root": "/root/autodl-tmp/高架桥数据/video_fixed",
+    "annotation": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/strong5_fewshot_v1/by_class_train_e9_strong5_boundary/占道施工.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 1101
+  },
+  "多车事故": {
+    "root": "/root/autodl-tmp/高架桥数据/video_fixed",
+    "annotation": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/strong5_fewshot_v1/by_class_train_e9_strong5_boundary/多车事故.jsonl",
+    "data_augment": false,
+    "repeat_time": 8,
+    "length": 82
+  },
+  "异常停车": {
+    "root": "/root/autodl-tmp/高架桥数据/video_fixed",
+    "annotation": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/strong5_fewshot_v1/by_class_train_e9_strong5_boundary/异常停车.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 1093
+  },
+  "抛洒物": {
+    "root": "/root/autodl-tmp/高架桥数据/video_fixed",
+    "annotation": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/strong5_fewshot_v1/by_class_train_e9_strong5_boundary/抛洒物.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 125
+  },
+  "拥堵": {
+    "root": "/root/autodl-tmp/高架桥数据/video_fixed",
+    "annotation": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/strong5_fewshot_v1/by_class_train_e9_strong5_boundary/拥堵.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 1223
+  }
+}

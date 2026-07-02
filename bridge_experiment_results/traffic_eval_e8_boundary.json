@@ -1,0 +1,70 @@
+{
+  "input_file": "/root/autodl-tmp/高架桥数据/traffic_test_pred_e8_boundary.jsonl",
+  "labels": [
+    "多车事故",
+    "拥堵",
+    "异常停车",
+    "占道施工",
+    "二轮车辆闯入",
+    "抛洒物"
+  ],
+  "label_aliases": {
+    "多车事故": [
+      "多车事故",
+      "多车",
+      "碰撞",
+      "追尾"
+    ],
+    "二轮车辆闯入": [
+      "二轮车辆闯入",
+      "二轮",
+      "非机动车闯入",
+      "摩托车",
+      "电动车"
+    ],
+    "抛洒物": [
+      "抛撒物",
+      "散落物",
+      "异物",
+      "抛洒物"
+    ]
+  },
+  "total_records": 0,
+  "valid_records_for_classification": 0,
+  "unknown_gt_count": 0,
+  "unknown_pred_count": 0,
+  "multiclass_detection": {},
+  "explanation_metrics": {
+    "rouge_l_f1_mean": 0.0,
+    "bertscore_f1_mean": null,
+    "bertscore_error": null,
+    "field_hit_metrics": {
+      "accident_type": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "location": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "lighting": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "cause": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "impact": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      }
+    }
+  },
+  "num_errors": 0
+}

@@ -1,0 +1,14 @@
+{
+  "total": 10,
+  "ok": 10,
+  "failed": 0,
+  "exact_match_rate": 0.2,
+  "contain_match_rate": 0.2,
+  "meta": "/root/autodl-tmp/高架桥数据/traffic_meta.json",
+  "test_jsonl": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/strong5_fewshot_v1/clear_collision_strong10_boundary.jsonl",
+  "model_path": "/root/autodl-tmp/HolmesVAU-master/ckpts/HolmesVAU_lora_e9_strong5_from_e8ovd_x8_s100_merged",
+  "sampler_path": "./holmesvau/ATS/anomaly_scorer.pth",
+  "select_frames": 12,
+  "use_ats": false,
+  "output_jsonl": "/root/autodl-tmp/高架桥数据/e9_multicar_clean_v1/strong5_fewshot_v1/clear_collision_strong10_pred_e9_strong5.jsonl"
+}

@@ -1,0 +1,16 @@
+﻿role,event_id,video,source_jsonl,human_reason,annotation_bucket,manual_note
+train_strong5,34674516,多车事故_20230830204400_突发事件_34674516.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+train_strong5,35315136,多车事故_20240112171600_突发事件_35315136.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+train_strong5,35359909,多车事故_20240210142900_突发事件_35359909.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，有人员下车 有追尾/碰撞过程
+train_strong5,35508959,多车事故_20240423073700_突发事件_35508959.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，有人员在车旁 有追尾/碰撞过程
+train_strong5,35717276,多车事故_20240621145015_突发事件_35717276.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，碰撞后停车，无人员在车旁 有追尾/碰撞过程
+detect_strong10,33411405,多车事故_20230730174600_突发事件_33411405.mp4,/root/autodl-tmp/高架桥数据/traffic_test.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+detect_strong10,34430541,多车事故_20230805115000_突发事件_34430541.mp4,/root/autodl-tmp/高架桥数据/traffic_test.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+detect_strong10,35075859,多车事故_20231109161400_突发事件_35075859.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+detect_strong10,35204601,多车事故_20231208103800_突发事件_35204601.mp4,/root/autodl-tmp/高架桥数据/traffic_test.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+detect_strong10,35359491,多车事故_20240209221400_突发事件_35359491.mp4,/root/autodl-tmp/高架桥数据/traffic_test.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+detect_strong10,35394244,多车事故_20240307101800_突发事件_35394244.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，有人员在车旁 有追尾/碰撞过程
+detect_strong10,35464755,多车事故_20240403212100_突发事件_35464755.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+detect_strong10,35717110,多车事故_20240621135230_突发事件_35717110.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，碰撞后停车，有人员在车旁 两车贴近停靠，有两人在查看车辆碰撞情况/交涉
+detect_strong10,35718483,多车事故_20240622082700_突发事件_35718483.mp4,/root/autodl-tmp/高架桥数据/traffic_test.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程
+detect_strong10,745935,多车事故_20230624204300_突发事件_745935.mp4,/root/autodl-tmp/高架桥数据/traffic_train.jsonl,collision_visible,collision_process_clear,有碰撞过程，无人员在车旁 有追尾/碰撞过程

@@ -1,0 +1,140 @@
+{
+  "input_file": "/root/autodl-tmp/高架桥数据/lock_base_pred_norm6.jsonl",
+  "labels": [
+    "拥堵",
+    "异常停车",
+    "占道施工",
+    "多车事故",
+    "二轮车辆闯入",
+    "抛洒物"
+  ],
+  "total_records": 1214,
+  "valid_records_for_classification": 1167,
+  "unknown_gt_count": 47,
+  "unknown_pred_count": 1167,
+  "multiclass_detection": {
+    "accuracy": 0.44473007712082263,
+    "macro_f1": 0.10260972716488731,
+    "per_class": {
+      "拥堵": {
+        "precision": 0.44473007712082263,
+        "recall": 1.0,
+        "f1": 0.6156583629893239,
+        "support": 519
+      },
+      "异常停车": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 216
+      },
+      "占道施工": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 149
+      },
+      "多车事故": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 63
+      },
+      "二轮车辆闯入": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 205
+      },
+      "抛洒物": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 15
+      }
+    },
+    "confusion_matrix": {
+      "拥堵": {
+        "拥堵": 519,
+        "异常停车": 0,
+        "占道施工": 0,
+        "多车事故": 0,
+        "二轮车辆闯入": 0,
+        "抛洒物": 0
+      },
+      "异常停车": {
+        "拥堵": 216,
+        "异常停车": 0,
+        "占道施工": 0,
+        "多车事故": 0,
+        "二轮车辆闯入": 0,
+        "抛洒物": 0
+      },
+      "占道施工": {
+        "拥堵": 149,
+        "异常停车": 0,
+        "占道施工": 0,
+        "多车事故": 0,
+        "二轮车辆闯入": 0,
+        "抛洒物": 0
+      },
+      "多车事故": {
+        "拥堵": 63,
+        "异常停车": 0,
+        "占道施工": 0,
+        "多车事故": 0,
+        "二轮车辆闯入": 0,
+        "抛洒物": 0
+      },
+      "二轮车辆闯入": {
+        "拥堵": 205,
+        "异常停车": 0,
+        "占道施工": 0,
+        "多车事故": 0,
+        "二轮车辆闯入": 0,
+        "抛洒物": 0
+      },
+      "抛洒物": {
+        "拥堵": 15,
+        "异常停车": 0,
+        "占道施工": 0,
+        "多车事故": 0,
+        "二轮车辆闯入": 0,
+        "抛洒物": 0
+      }
+    }
+  },
+  "explanation_metrics": {
+    "rouge_l_f1_mean": 0.0,
+    "bertscore_f1_mean": null,
+    "bertscore_error": null,
+    "field_hit_metrics": {
+      "accident_type": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "location": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "lighting": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "cause": {
+        "hit": 0,
+        "count_with_gt": 0,
+        "hit_rate": 0.0
+      },
+      "impact": {
+        "hit": 0,
+        "count_with_gt": 519,
+        "hit_rate": 0.0
+      }
+    }
+  },
+  "num_errors": 648
+}

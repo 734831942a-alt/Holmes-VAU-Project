@@ -1,0 +1,8 @@
+{
+  "HIVAU_recover": {
+    "annotation": "/root/autodl-tmp/高架桥数据/traffic_train.jsonl",
+    "root": "/root/autodl-tmp/高架桥数据/video_fixed",
+    "data_augment": false,
+    "repeat_time": 1
+  }
+}

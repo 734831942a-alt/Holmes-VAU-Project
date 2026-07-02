@@ -1,0 +1,14 @@
+{
+  "total": 50,
+  "ok": 50,
+  "failed": 0,
+  "exact_match_rate": 0.0,
+  "contain_match_rate": 0.0,
+  "meta": "/root/autodl-tmp/高架桥数据/traffic_meta.json",
+  "test_jsonl": "/root/autodl-tmp/高架桥数据/traffic_test_rand50_promptv2.jsonl",
+  "model_path": "/root/autodl-tmp/HolmesVAU-master/ckpts/HolmesVAU_lora",
+  "sampler_path": "/root/autodl-tmp/HolmesVAU-master/holmesvau/ATS/anomaly_scorer.pth",
+  "select_frames": 12,
+  "use_ats": true,
+  "output_jsonl": "/root/autodl-tmp/高架桥数据/traffic_test_rand50_promptv2_pred.jsonl"
+}
