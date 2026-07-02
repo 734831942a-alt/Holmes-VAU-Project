@@ -1,0 +1,136 @@
+nohup: ignoring input
+[h264 @ 0x564b0c564680] error while decoding MB 77 42, bytestream -11
+[h264 @ 0x564b051ca1c0] error while decoding MB 18 57, bytestream -6
+[h264 @ 0x564b0a41b5c0] error while decoding MB 101 61, bytestream -6
+[h264 @ 0x564b0c5a0700] error while decoding MB 128 63, bytestream -7
+[h264 @ 0x564afa67e000] error while decoding MB 69 59, bytestream -6
+[h264 @ 0x564b0b6e9f80] error while decoding MB 6 81, bytestream -28
+[h264 @ 0x564b0c59a840] error while decoding MB 6 81, bytestream -28
+[h264 @ 0x564b0c5e3c40] error while decoding MB 13 58, bytestream -6
+[h264 @ 0x564b0c59b840] error while decoding MB 149 19, bytestream -5
+[h264 @ 0x564b0c59e5c0] error while decoding MB 83 70, bytestream -5
+[h264 @ 0x564b051c4d00] cabac decode of qscale diff failed at 97 53
+[h264 @ 0x564b051c4d00] error while decoding MB 97 53, bytestream 12899
+[h264 @ 0x564b051c2c80] error while decoding MB 91 9, bytestream -5
+[h264 @ 0x564b051c4f40] cabac decode of qscale diff failed at 77 15
+[h264 @ 0x564b051c4f40] error while decoding MB 77 15, bytestream 9945
+[h264 @ 0x564b0a413400] error while decoding MB 140 22, bytestream -5
+[h264 @ 0x564b05197700] error while decoding MB 64 58, bytestream -5
+[h264 @ 0x564b0b0f3d40] error while decoding MB 114 34, bytestream -7
+[h264 @ 0x564b051c9a00] error while decoding MB 119 37, bytestream -6
+[h264 @ 0x564b0c4e2080] error while decoding MB 103 3, bytestream -13
+[h264 @ 0x564b0b1fefc0] cbp too large (3199971767) at 88 24
+[h264 @ 0x564b0b1fefc0] error while decoding MB 88 24
+[h264 @ 0x564b0c4a18c0] error while decoding MB 45 63, bytestream -18
+[h264 @ 0x564b0b0cd2c0] error while decoding MB 14 82, bytestream -5
+[h264 @ 0x564b0c621080] error while decoding MB 105 21, bytestream -5
+[h264 @ 0x564b0bd9e740] error while decoding MB 119 61, bytestream -6
+[h264 @ 0x564b0c61f640] error while decoding MB 42 41, bytestream -7
+[h264 @ 0x564b0aaf7ac0] error while decoding MB 101 19, bytestream -7
+[h264 @ 0x564b0bdb0ec0] error while decoding MB 100 39, bytestream -10
+[h264 @ 0x564b0aaf82c0] error while decoding MB 42 27, bytestream -6
+[h264 @ 0x564b0c59e5c0] cabac decode of qscale diff failed at 159 127
+[h264 @ 0x564b0c59e5c0] error while decoding MB 159 127, bytestream 6632
+[h264 @ 0x564b0b1f1100] error while decoding MB 51 21, bytestream -9
+[h264 @ 0x564b0b0443c0] left block unavailable for requested intra mode
+[h264 @ 0x564b0b0443c0] error while decoding MB 0 15, bytestream 0
+[h264 @ 0x564b0bdf4b00] error while decoding MB 45 82, bytestream -5
+[h264 @ 0x564b0a419a00] cbp too large (3199971767) at 72 44
+[h264 @ 0x564b0a419a00] error while decoding MB 72 44
+[h264 @ 0x564b0b046840] error while decoding MB 67 11, bytestream -6
+[h264 @ 0x564b0b0cd0c0] error while decoding MB 57 9, bytestream -51
+[h264 @ 0x564b0c49e340] cabac decode of qscale diff failed at 105 2
+[h264 @ 0x564b0c49e340] error while decoding MB 105 2, bytestream -8
+[h264 @ 0x564b0ab12880] error while decoding MB 27 87, bytestream -7
+[h264 @ 0x564b0bd93500] error while decoding MB 87 4, bytestream -9
+[h264 @ 0x564b0c621900] mb_type 42 in P slice too large at 95 11
+[h264 @ 0x564b0c621900] error while decoding MB 95 11
+[h264 @ 0x564b0a41a880] error while decoding MB 60 66, bytestream -5
+[h264 @ 0x564b0b66e040] cabac decode of qscale diff failed at 10 6
+[h264 @ 0x564b0b66e040] error while decoding MB 10 6, bytestream -6
+[h264 @ 0x564b051c3240] error while decoding MB 91 39, bytestream -5
+[h264 @ 0x564b0b1f2d80] error while decoding MB 152 9, bytestream -12
+[h264 @ 0x564b052ca580] error while decoding MB 26 0, bytestream -10
+[h264 @ 0x564b0b0f4200] error while decoding MB 13 23, bytestream -8
+[h264 @ 0x564b0b0aa100] error while decoding MB 69 8, bytestream -20
+[h264 @ 0x564b0bfd9340] error while decoding MB 33 44, bytestream -6
+[h264 @ 0x564b051c3740] error while decoding MB 9 53, bytestream -20
+[h264 @ 0x564b054cc000] error while decoding MB 63 11, bytestream -9
+[h264 @ 0x564b0b0d9500] error while decoding MB 94 31, bytestream -10
+[h264 @ 0x564b0ab15940] error while decoding MB 70 6, bytestream -31
+[h264 @ 0x564b0c61d700] error while decoding MB 46 50, bytestream -5
+[h264 @ 0x564b052a1440] error while decoding MB 113 66, bytestream -6
+[h264 @ 0x564b0b1fed80] error while decoding MB 68 19, bytestream -10
+[h264 @ 0x564b0c49f3c0] cabac decode of qscale diff failed at 52 46
+[h264 @ 0x564b0c49f3c0] error while decoding MB 52 46, bytestream 657
+[h264 @ 0x564b0c60d580] error while decoding MB 33 42, bytestream -17
+[h264 @ 0x564b0b8464c0] error while decoding MB 82 63, bytestream -9
+[h264 @ 0x564b0b047d40] error while decoding MB 70 29, bytestream -10
+[h264 @ 0x564b0bfcf600] error while decoding MB 78 14, bytestream -9
+[h264 @ 0x564b0b681c80] error while decoding MB 88 67, bytestream -15
+[h264 @ 0x564b0c622180] error while decoding MB 50 7, bytestream -10
+[h264 @ 0x564b0c4d6280] error while decoding MB 42 20, bytestream -6
+[h264 @ 0x564b051ca400] error while decoding MB 62 10, bytestream -5
+[h264 @ 0x564b0bfda780] error while decoding MB 117 32, bytestream -8
+[h264 @ 0x564b0c564480] error while decoding MB 106 44, bytestream -10
+[h264 @ 0x564b003b9d00] corrupted macroblock 18 7 (total_coeff=-1)
+[h264 @ 0x564b003b9d00] error while decoding MB 18 7
+[h264 @ 0x564b0bd92800] error while decoding MB 19 53, bytestream -6
+[h264 @ 0x564b052cae00] error while decoding MB 54 12, bytestream -8
+[h264 @ 0x564b003b7e40] error while decoding MB 55 22, bytestream -6
+[h264 @ 0x564b0c620040] error while decoding MB 91 28, bytestream -5
+[h264 @ 0x564b0bd91580] error while decoding MB 45 3, bytestream -11
+[h264 @ 0x564b0b0d9500] error while decoding MB 65 45, bytestream -10
+[h264 @ 0x564b0c561480] error while decoding MB 70 38, bytestream -7
+[h264 @ 0x564b0ab15d00] corrupted macroblock 29 13 (total_coeff=-1)
+[h264 @ 0x564b0ab15d00] error while decoding MB 29 13
+[h264 @ 0x564b0b1e8140] error while decoding MB 54 41, bytestream -10
+[h264 @ 0x564b0b7eeb00] error while decoding MB 127 47, bytestream -7
+[h264 @ 0x564b0b0f2700] error while decoding MB 151 9, bytestream -6
+[h264 @ 0x564b051c4b80] error while decoding MB 70 52, bytestream -5
+[h264 @ 0x564b0a410080] error while decoding MB 7 51, bytestream -26
+[h264 @ 0x564b053cbe00] error while decoding MB 158 26, bytestream -5
+[h264 @ 0x564b0b1f3600] error while decoding MB 2 59, bytestream -8
+[h264 @ 0x564b0b82c980] error while decoding MB 17 4, bytestream -10
+[h264 @ 0x564b0b6dd880] error while decoding MB 132 53, bytestream -8
+[h264 @ 0x564b0b0ab980] error while decoding MB 62 42, bytestream -6
+[h264 @ 0x564b0b0dc880] error while decoding MB 35 10, bytestream -33
+[h264 @ 0x564b0b6de300] error while decoding MB 155 31, bytestream -9
+[h264 @ 0x564b0bdb4ac0] error while decoding MB 71 88, bytestream -8
+[h264 @ 0x564b0519ec80] error while decoding MB 0 84, bytestream -14
+[h264 @ 0x564b093cb680] error while decoding MB 54 68, bytestream -5
+[h264 @ 0x564b0be79900] cabac decode of qscale diff failed at 74 26
+[h264 @ 0x564b0be79900] error while decoding MB 74 26, bytestream 2111
+[h264 @ 0x564b0aaf7600] error while decoding MB 134 21, bytestream -7
+[h264 @ 0x564b0c4e15c0] error while decoding MB 71 49, bytestream -5
+[h264 @ 0x564b0b847800] error while decoding MB 29 57, bytestream -8
+[h264 @ 0x564b0529ff00] error while decoding MB 67 5, bytestream -6
+[h264 @ 0x564b0ab12880] error while decoding MB 55 53, bytestream -6
+[h264 @ 0x564b0b80bf00] error while decoding MB 13 47, bytestream -8
+[h264 @ 0x564b0c60cf40] error while decoding MB 57 35, bytestream -6
+[h264 @ 0x564b0a41ba00] error while decoding MB 86 16, bytestream -6
+[h264 @ 0x564b093ca340] cabac decode of qscale diff failed at 121 43
+[h264 @ 0x564b093ca340] error while decoding MB 121 43, bytestream -5
+[h264 @ 0x564b0a41b3c0] error while decoding MB 112 5, bytestream -16
+[h264 @ 0x564b0aff4640] error while decoding MB 154 72, bytestream -17
+[h264 @ 0x564b0bf79600] error while decoding MB 85 23, bytestream -15
+[h264 @ 0x564b06074a80] error while decoding MB 10 87, bytestream -18
+[h264 @ 0x564b0b82c980] error while decoding MB 10 87, bytestream -18
+[h264 @ 0x564b0b65a640] error while decoding MB 7 16, bytestream -14
+[h264 @ 0x564b0b7e3000] cabac decode of qscale diff failed at 136 17
+[h264 @ 0x564b0b7e3000] error while decoding MB 136 17, bytestream 18404
+[h264 @ 0x564b0aaf7ac0] error while decoding MB 124 21, bytestream -5
+[h264 @ 0x564b093c9d00] mb_type 43 in P slice too large at 32 61
+[h264 @ 0x564b093c9d00] error while decoding MB 32 61
+[h264 @ 0x564b0c562340] negative number of zero coeffs at 39 13
+[h264 @ 0x564b0c562340] error while decoding MB 39 13
+[h264 @ 0x564b0a412980] error while decoding MB 70 21, bytestream -6
+[h264 @ 0x564b0aaf7600] Invalid level prefix
+[h264 @ 0x564b0aaf7600] error while decoding MB 18 60
+[h264 @ 0x564b0bfcf040] error while decoding MB 94 123, bytestream -5
+[h264 @ 0x564b0b047780] error while decoding MB 73 34, bytestream -18
+[h264 @ 0x564b0bfcf040] error while decoding MB 92 36, bytestream -14
+[h264 @ 0x564b0b0e4140] error while decoding MB 105 61, bytestream -13
+[h264 @ 0x564b0b7eca00] error while decoding MB 34 7, bytestream -47
+[h264 @ 0x564b0c5a4d40] error while decoding MB 99 63, bytestream -20
+saved: /root/autodl-tmp/高架桥数据/traffic_train_ovd_summary_v4.jsonl records: 4853

@@ -1,0 +1,29 @@
+nohup: ignoring input
+[h264 @ 0x5637922559c0] error while decoding MB 110 62, bytestream -6
+[h264 @ 0x56379159f780] error while decoding MB 46 89, bytestream -5
+[h264 @ 0x563792112740] cbp too large (110) at 94 36
+[h264 @ 0x563792112740] error while decoding MB 94 36
+[h264 @ 0x56379143ae00] error while decoding MB 41 47, bytestream -7
+[h264 @ 0x5637927bf680] error while decoding MB 123 56, bytestream -5
+[h264 @ 0x56378b524040] error while decoding MB 97 64, bytestream -8
+[h264 @ 0x563791b9d780] error while decoding MB 120 57, bytestream -9
+[h264 @ 0x563791a2c280] negative number of zero coeffs at 80 18
+[h264 @ 0x563791a2c280] error while decoding MB 80 18
+[h264 @ 0x563791403b80] out of range intra chroma pred mode
+[h264 @ 0x563791403b80] error while decoding MB 54 32
+[h264 @ 0x56378b521100] negative number of zero coeffs at 32 43
+[h264 @ 0x56378b521100] error while decoding MB 32 43
+[h264 @ 0x5637929437c0] cabac decode of qscale diff failed at 122 32
+[h264 @ 0x5637929437c0] error while decoding MB 122 32, bytestream -5
+[h264 @ 0x56378eaf8680] error while decoding MB 70 55, bytestream -7
+[h264 @ 0x56379157d880] error while decoding MB 21 73, bytestream -7
+[h264 @ 0x563793072780] error while decoding MB 61 16, bytestream -6
+[h264 @ 0x56378eefb400] error while decoding MB 141 81, bytestream -6
+[h264 @ 0x563791403b80] out of range intra chroma pred mode
+[h264 @ 0x563791403b80] error while decoding MB 99 28
+[h264 @ 0x56379283dd00] error while decoding MB 98 25, bytestream -8
+[h264 @ 0x56379143d8c0] error while decoding MB 13 0, bytestream -7
+[h264 @ 0x56378dee2780] error while decoding MB 158 89, bytestream -5
+[h264 @ 0x563791b282c0] error while decoding MB 150 6, bytestream -5
+[h264 @ 0x56378eaca640] error while decoding MB 143 88, bytestream -6
+saved: /root/autodl-tmp/高架桥数据/traffic_test_ovd_summary_v4.jsonl records: 1214
