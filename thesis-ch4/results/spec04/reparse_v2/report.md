@@ -1,0 +1,78 @@
+312/932 顺序前缀、类别仅二轮 221 + 施工 91、不可外推全 test
+
+# SPEC-04-A1 离线复算
+
+Layer A 以 A1 的“恰好一对无歧义非负秒数”为条件，覆盖明列的四类语法；同时实现两端都显式标秒的范围及 start/end respectively 表达。验收不设约 188 的目标值。
+
+{
+  "scope_notice": "312/932 顺序前缀、类别仅二轮 221 + 施工 91、不可外推全 test",
+  "measurement_version": "SPEC-04-A1/reparse_v2",
+  "configuration_sha256": "e81fca58461392aa812413f73d1481806872f4eb2dbb5ce1e17ccbae19d4de1c",
+  "spec_sha256": "c0b1e902ad2783a542b55f86a8c1a39e71527a5d690bdc0386710f315c13f2d4",
+  "model_generation_calls": 0,
+  "sample_count": 312,
+  "expected_count": 932,
+  "complete": false,
+  "layer_a_pass_count": 188,
+  "layer_a_fail_count": 124,
+  "parse_fail_rate": 0.39743589743589747,
+  "format_ok_rate": 0.0,
+  "layer_a_reason_histogram": {
+    "no_interval": 117,
+    "single_point": 5,
+    "multi_interval": 0,
+    "missing_unit": 1,
+    "ambiguous_clock": 1
+  },
+  "layer_b_reason_histogram": {
+    "valid": 188,
+    "reverse_order": 0,
+    "zero_duration": 0
+  },
+  "out_of_range_count": 0,
+  "duration_distribution_sec": {
+    "count": 188,
+    "min": 0.00999999999999801,
+    "median": 2.4399999999999995,
+    "max": 14.919999999999995,
+    "quantiles": {
+      "0.05": 0.7199999999999999,
+      "0.25": 2.360000000000001,
+      "0.5": 2.4399999999999995,
+      "0.75": 4.879999999999999,
+      "0.95": 9.798000000000002
+    }
+  },
+  "start_distribution_sec": {
+    "count": 188,
+    "min": 1.04,
+    "median": 8.219999999999999,
+    "max": 42.2,
+    "quantiles": {
+      "0.05": 2.44,
+      "0.25": 6.08,
+      "0.5": 8.219999999999999,
+      "0.75": 12.25,
+      "0.95": 22.538999999999998
+    }
+  },
+  "reverse_order_intervals": [],
+  "avg_frames": 12,
+  "full_clip_ratio": 0.0,
+  "truncation_suspected_count": 27,
+  "rate_denominator": "persisted records only; interrupted attempts excluded",
+  "distribution_population": "Layer A passed and Layer B valid/zero_duration; reverse_order listed separately",
+  "n_attempted": 313,
+  "n_persisted": 312,
+  "n_interrupted": 1,
+  "interrupted": [
+    {
+      "video_id": "占道施工_20231116003401_运行安全_35106758",
+      "status": "interrupted",
+      "counted_as_parse_failure": false
+    }
+  ]
+}
+
+原文未改；逆序区间单列，不交换、不进合法区间分布；零时长和越界值不裁剪。
+存量停止原因均为 unknown；truncated=null 表示没有权威证据，启发式仅记 suspected。

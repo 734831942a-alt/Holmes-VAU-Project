@@ -1,0 +1,16 @@
+data_config: configs/data.yaml
+b0_config: configs/b0_selfdata.yaml
+b0_output: results/b0
+frozen_hashes: results/spec04/frozen-before.json
+frozen_spec: specs/SPEC-04.md
+frozen_spec_sha256: 09fba92ad69c1968b706588da089c6ca9ee5ad9c8b7f0490ca89696b73da4988
+required_manifest_fields: [video_id, path, category, duration_sec, fps_used, first_frame_pts, time_base, camera_group, camera_group_conf, split, flags]
+required_prediction_fields: [video_id, raw_output, parsed_start, parsed_end, parse_ok, frames_seen]
+required_metrics: [parse_fail_rate, format_ok_rate, duration_distribution_sec, start_distribution_sec, avg_frames, full_clip_ratio]
+required_pilot_fields: [mIoU, delta_t_start_median]
+protected_packages: {torch: '2.11.0+cu128', transformers: '4.46.3', peft: '0.7.1', accelerate: '0.27.2'}
+forbidden_package: flash-attn
+new_system_packages: [tmux, tesseract-ocr, tesseract-ocr-chi-sim]
+issue_glob: 04-*.md
+rare_class_issue: issues/04-rare-class-empty.md
+third_chapter_issue: issues/04-third-chapter-dirty.md

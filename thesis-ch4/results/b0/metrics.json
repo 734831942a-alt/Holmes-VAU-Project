@@ -1,0 +1,41 @@
+{
+  "sample_count": 312,
+  "expected_count": 932,
+  "complete": false,
+  "parse_fail_rate": 1.0,
+  "format_ok_rate": 0.0,
+  "duration_distribution_sec": {
+    "count": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "quantiles": {
+      "0.05": null,
+      "0.25": null,
+      "0.5": null,
+      "0.75": null,
+      "0.95": null
+    }
+  },
+  "start_distribution_sec": {
+    "count": 0,
+    "min": null,
+    "median": null,
+    "max": null,
+    "quantiles": {
+      "0.05": null,
+      "0.25": null,
+      "0.5": null,
+      "0.75": null,
+      "0.95": null
+    }
+  },
+  "avg_frames": 12,
+  "full_clip_ratio": 0.0,
+  "full_clip_tolerance_sec": 1.0,
+  "rate_denominator": "all persisted test records; distributions use parse_ok records",
+  "interval_out_of_bounds_count": 0,
+  "parse_semantics": "Exactly one START/END pair, finite and 0 <= start < end; no clipping to video bounds",
+  "format_semantics": "Exact full output match to configured format, including whitespace",
+  "pilot_enabled": false
+}

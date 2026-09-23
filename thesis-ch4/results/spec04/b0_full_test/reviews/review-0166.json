@@ -1,0 +1,9 @@
+{
+  "n_generated": 166,
+  "reviewed_at": "2026-09-21T08:57:49.895655+00:00",
+  "raw_sample_sha256": "e86414d5aa315c12574e9d52225193a33b986184827962b3f814055316f43c12",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "逐条审看8条原文：7条没有起止区间，1条仅12.28秒单点，no_interval/single_point拒绝符合A1。1条32 token无EOS截断，其余EOS证据一致；未发现有效区间被误拒。四项实现错误信号均未触发。",
+  "signals_after_raw_review": []
+}

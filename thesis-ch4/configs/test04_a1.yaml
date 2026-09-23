@@ -1,0 +1,63 @@
+reparse_config: configs/b0_reparse_v2.yaml
+original_metrics: results/b0/metrics.json
+baseline: results/spec04/a1-before.json
+test_results: results/spec04/tests-04-a1.json
+duration_sec: 10
+frames_seen: 12
+fixture_video_id: fixture
+eos_token_id: 99
+ordinary_token_id: 7
+other_tokens: [7, 8]
+input_prefix: [41, 42]
+mock_raw_output: 'START=1, END=2'
+mock_frames: [0, 1, 2]
+fixture_predictions: predictions.jsonl
+fixture_attempts: attempts.jsonl
+fixture_future_config: future.yaml
+fixture_future_data_config: future-data.yaml
+fixture_manifest: manifest.jsonl
+fixture_splits: splits.json
+fixture_timeline: timeline.jsonl
+fixture_output: future-output
+timeline_pts: [0, 1000, 2000]
+time_base: '1/1000'
+category: 二轮车辆闯入
+camera_group: mock-camera
+source_path: mock-video.mp4
+no_interval_text: 'No anomalous event is identified.'
+suspected_text: 'The event starts'
+completed_text: 'No event.'
+parser_cases:
+  - {name: start_end, raw: 'START=1, END=2', ok: true, b: valid, start: 1, end: 2, format: true}
+  - {name: start_end_whitespace, raw: ' START = 1 , END = 2 ', ok: true, b: valid, start: 1, end: 2, format: false}
+  - {name: starts, raw: 'The event starts at 1.25 seconds and ends at 2.5 seconds.', ok: true, b: valid, start: 1.25, end: 2.5, format: false}
+  - {name: begins, raw: 'It begins at 1 seconds and ends at 2 seconds.', ok: true, b: valid, start: 1, end: 2, format: false}
+  - {name: from_to, raw: 'The event is from 1 to 2 seconds.', ok: true, b: valid, start: 1, end: 2, format: false}
+  - {name: dash_s, raw: '1–2 s', ok: true, b: valid, start: 1, end: 2, format: false}
+  - {name: dash_chinese, raw: '1-2 秒', ok: true, b: valid, start: 1, end: 2, format: false}
+  - {name: decimal, raw: 'START=.5, END=2.25', ok: true, b: valid, start: 0.5, end: 2.25, format: true}
+  - {name: no_interval, raw: 'No event detected.', ok: false, reason: no_interval}
+  - {name: single_point, raw: 'The event occurs at 3 seconds.', ok: false, reason: single_point}
+  - {name: multi_interval, raw: 'START=1, END=2; START=3, END=4', ok: false, reason: multi_interval}
+  - {name: repeated_same_pair, raw: 'START=1, END=2; START=1, END=2', ok: false, reason: multi_interval}
+  - {name: multi_mixed, raw: 'from 1 to 2 seconds; 3–4 s', ok: false, reason: multi_interval}
+  - {name: missing_end_unit, raw: 'starts at 1 seconds and ends at 2', ok: false, reason: missing_unit}
+  - {name: missing_start_unit, raw: 'starts at 1 and ends at 2 seconds', ok: false, reason: missing_unit}
+  - {name: from_without_units, raw: 'from 1 to 2', ok: false, reason: missing_unit}
+  - {name: range_without_units, raw: '1–2', ok: false, reason: missing_unit}
+  - {name: ambiguous_clock, raw: 'starts at 21.30:00 and ends at 21.31:00.', ok: false, reason: ambiguous_clock}
+  - {name: interval_and_clock, raw: 'START=1, END=2 or 21.30:00', ok: false, reason: ambiguous_clock}
+  - {name: reverse_order, raw: 'START=4, END=2', ok: true, b: reverse_order, start: 4, end: 2, format: true}
+  - {name: zero_duration, raw: 'START=2, END=2', ok: true, b: zero_duration, start: 2, end: 2, format: true}
+  - {name: out_of_range, raw: 'START=1, END=999', ok: true, b: valid, start: 1, end: 999, format: true, outside: true}
+  - {name: zero_out_of_range, raw: 'START=999, END=999', ok: true, b: zero_duration, start: 999, end: 999, format: true, outside: true}
+  - {name: negative_start, raw: 'START=-1, END=2', ok: false}
+  - {name: negative_dash, raw: '-1-2 s', ok: false}
+  - {name: exponent, raw: 'START=1e2, END=200', ok: false}
+  - {name: no_guess_seconds, raw: 'starts at 1 frames and ends at 2 frames', ok: false}
+  - {name: explicit_start_end_respectively, raw: 'The start and end times are 1s and 2s, respectively.', ok: true, b: valid, start: 1, end: 2, format: false}
+  - {name: explicit_seconds_range, raw: 'The event occurs at 1 seconds to 2 seconds', ok: true, b: valid, start: 1, end: 2, format: false}
+  - {name: explicit_seconds_range_reverse, raw: 'from 4 seconds to 2 seconds', ok: true, b: reverse_order, start: 4, end: 2, format: false}
+  - {name: unrelated_two_numbers, raw: 'A car is visible at 1 seconds. A truck is visible at 2 seconds.', ok: false, reason: no_interval}
+  - {name: respectively_missing_unit, raw: 'The start and end times are 1s and 2, respectively.', ok: false, reason: missing_unit}
+  - {name: explicit_range_missing_unit, raw: 'at 1 seconds to 2', ok: false, reason: missing_unit}

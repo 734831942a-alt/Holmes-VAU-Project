@@ -1,0 +1,84 @@
+# SPEC-04 frozen implementation parameters; paths are relative to repository unless absolute.
+src: /root/autodl-tmp/高架桥数据/video_fixed
+pattern: '*.mp4'
+category_separator: '_'
+manifest: data/manifest.jsonl
+timeline_records: results/spec04/timeline.jsonl
+probe_records: results/spec04/probe-timeline.jsonl
+header_records: results/spec04/headers.jsonl
+ocr_records: results/spec04/ocr.jsonl
+ocr_lock: results/spec04/ocr.lock
+probe_report: results/probe-selfdata.md
+timeline_report: data/timeline_report.md
+camera_groups: data/camera_groups.json
+splits: data/splits.json
+split_lock: data/test-lock.json
+split_table: results/spec04/split-counts.md
+probe_frames: results/spec04/probe-frames
+issues_dir: issues
+issue_template: 04-{slug}.md
+baseline_source: 数据集画像_2026-09-19/dataset_summary.json
+baseline_count: 6217
+baseline_categories:
+  二轮车辆闯入: 1471
+  占道施工: 1421
+  多车事故: 180
+  异常停车: 1481
+  抛洒物: 165
+  拥堵: 1499
+baseline_container_duration: {min: 4.92, median: 59.96, max: 1174.72, over120: 3}
+probe_samples: 50
+seed: 42
+example_count: 3
+long_threshold_sec: 120
+significant_ratio: 0.10
+workers: 24
+progress_every: 25
+ffprobe: /usr/bin/ffprobe
+ffmpeg: /usr/bin/ffmpeg
+stream_selector: v
+stream_index: 0
+decode_threads: 1
+frame_pts_field: pkt_pts
+timeout_sec: 1800
+ocr:
+  engine: rapidocr
+  workers: 4
+  rapid_options:
+    intra_op_num_threads: 1
+    inter_op_num_threads: 1
+    det_limit_side_len: 960
+    det_limit_type: max
+    det_use_cuda: false
+    cls_use_cuda: false
+    rec_use_cuda: false
+    text_score: 0.0
+  expected_text_lines: 1
+  executable: /usr/bin/tesseract
+  language: chi_sim+eng
+  psm: 6
+  # Fixed normalized top-left camera overlay ROI; timestamp row is excluded.
+  roi: [0.005, 0.065, 0.65, 0.18]
+  frame_index: 0
+  confidence_threshold: 0.85
+  confidence_scale: 100
+  confidence_floor: 0
+  min_chars: 4
+  # Reject strings without a Chinese location/camera component (e.g. timestamp-only).
+  content_regex: '[\u4e00-\u9fff]'
+  unicode_form: NFKC
+  edit_distance: 1
+  unknown_template: UNKNOWN_{i}
+  boundary_confidence: 0
+  timeout_sec: 90
+  omp_threads: '1'
+split_ratios: {train: 0.70, val: 0.15, test: 0.15}
+rare_categories: [多车事故, 抛洒物]
+source_event:
+  # Exact event record identifier, scoped by its recorded source type; no inferred camera ID.
+  regex: '^[^_]+_(?P<timestamp>\d{14})_(?P<source>[^_]+)_(?P<event>\d+)(?:_.*)?$'
+  fields: [source, event]
+  separator: ':'
+third_chapter: /root/autodl-tmp/HolmesVAU-master
+acceptance: results/accept-04.json
+test_results: results/spec04/tests.json

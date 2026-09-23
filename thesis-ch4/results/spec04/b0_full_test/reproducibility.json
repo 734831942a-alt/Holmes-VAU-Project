@@ -1,0 +1,10 @@
+{
+  "expected_overlap": 312,
+  "compared_count": 312,
+  "exact_count": 312,
+  "reproduced_exact_rate": 1.0,
+  "comparison_complete": true,
+  "differences": [],
+  "diagnostic_only": true,
+  "not_a_pass_fail_threshold": true
+}

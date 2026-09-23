@@ -1,0 +1,19 @@
+b0_config: configs/b0_selfdata.yaml
+manifest: data/manifest.jsonl
+predictions: results/b0/predictions.jsonl
+attempts: results/b0/attempts.jsonl
+metrics: results/b0/metrics.json
+output: results/spec04/b0-diagnosis.json
+process_module: eval.b0_selfdata
+proc_root: /proc
+proc_cmdline: cmdline
+proc_separator: "\0"
+patterns:
+  natural_seconds: 'The anomaly event (?:starts|begins) at (?P<start>\d+(?:\.\d+)?) seconds and ends at (?P<end>\d+(?:\.\d+)?) seconds\.'
+  natural_respectively: 'The anomaly exists and its start and end times are (?P<start>\d+(?:\.\d+)?)s and (?P<end>\d+(?:\.\d+)?)s, respectively\.'
+  natural_range: 'The anomaly event is identified as a Car Accident, specifically a Car Accident, which occurs at (?P<start>\d+(?:\.\d+)?) seconds to (?P<end>\d+(?:\.\d+)?) seconds'
+  omitted_end_unit: 'The anomaly event starts at (?P<start>\d+(?:\.\d+)?) seconds and ends at (?P<end>\d+(?:\.\d+)?)\.'
+unambiguous_seconds_forms: [natural_seconds, natural_respectively, natural_range]
+clock_pattern: '\d+\.\d+:\d+'
+single_time_pattern: 'occurs at approximately \d+(?:\.\d+)? seconds into the video'
+sentence_endings: ['.', '!', '?']

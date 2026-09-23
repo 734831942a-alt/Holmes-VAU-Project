@@ -1,0 +1,14 @@
+{
+  "run": 5,
+  "successful": true,
+  "test_names": [
+    "test_authoritative_evidence_validation_and_eos_precedence",
+    "test_checkpoint_requires_eight_raw_and_ignores_parse_failure",
+    "test_clean_interruption_resumes_without_regenerating_persisted_rows",
+    "test_exact_frozen_thresholds_and_model_behavior_never_pauses",
+    "test_round_robin_keeps_exact_test_and_warmup_crosses_categories"
+  ],
+  "failures": [],
+  "errors": [],
+  "real_model_generations": 0
+}

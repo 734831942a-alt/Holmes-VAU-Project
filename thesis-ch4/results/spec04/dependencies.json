@@ -1,0 +1,37 @@
+{
+  "python": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.46.3",
+    "peft": "0.7.1",
+    "accelerate": "0.27.2",
+    "onnxruntime": "1.23.2",
+    "rapidocr_onnxruntime": "1.4.4",
+    "shapely": "2.1.2",
+    "pyclipper": "1.4.0",
+    "coloredlogs": "15.0.1",
+    "humanfriendly": "10.0",
+    "numpy": "2.2.6",
+    "opencv-python": "4.13.0.92",
+    "PyYAML": "6.0.3"
+  },
+  "system": {
+    "tesseract-ocr": "4.1.1-2.1build1",
+    "tesseract-ocr-chi-sim": "1:4.00~git30-7274cfa-1.1",
+    "tmux": "3.2a-4ubuntu0.2"
+  },
+  "added_python": [
+    "onnxruntime",
+    "rapidocr_onnxruntime",
+    "shapely",
+    "pyclipper",
+    "coloredlogs",
+    "humanfriendly"
+  ],
+  "protected_python_unchanged": [
+    "torch",
+    "transformers",
+    "peft",
+    "accelerate"
+  ],
+  "installation_mode": "Python packages installed individually with --no-deps; no flash-attn"
+}

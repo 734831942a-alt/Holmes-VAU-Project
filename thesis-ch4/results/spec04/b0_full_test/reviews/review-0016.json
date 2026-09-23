@@ -1,0 +1,9 @@
+{
+  "n_generated": 16,
+  "reviewed_at": "2026-09-21T08:43:09.794308+00:00",
+  "raw_sample_sha256": "8fb8707d093fcf5100b852674665b89fbf7f848fabcc08f44c0e399dd5225e6a",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "逐条审看前8条原文及token证据：施工12.08–16.88、拥堵17.04–21.88、二轮6.12–8.56均被A1正确提取；其余明确未给区间，no_interval正确。8条均非空且EOS证据完整；全16条异常/畸形/空输出率为0、截断率0.125，未达暂停阈值。严格格式不遵守属于模型行为，不暂停。",
+  "signals_after_raw_review": []
+}

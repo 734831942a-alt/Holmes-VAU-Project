@@ -1,0 +1,43 @@
+# HolmesVAU-2B weight directory. Runtime code never embeds this path.
+model_path: /root/autodl-tmp/HolmesVAU-master/ckpts/HolmesVAU-2B
+# HIVAU-70k root containing raw_annotations/ and the source video tree.
+data_root: /root/autodl-tmp/HolmesVAU-master/HIVAU-70k
+# B0 output directory.
+output_dir: /root/thesis-ch4/results/b0
+# Exact number of randomly sampled event segments.
+num_samples: 200
+# Reproducible Python sampling seed.
+seed: 42
+# Direct-answer prompt. It requests only the parser's locked format and no rationale/CoT.
+prompt_template: |
+  Locate the anomalous event in this video. Return only its start and end time in seconds in exactly this format: START=<seconds>, END=<seconds>
+# Greedy decoding output cap.
+max_new_tokens: 32
+# SPEC-01 requires greedy decoding.
+temperature: 0
+# Number of uniformly sampled frames actually shown to the model.
+num_frames: 12
+# HolmesVAU visual input size inherited from the frozen inference implementation.
+input_size: 448
+# Maximum dynamic image tiles per sampled frame; one preserves one frame per timestamp.
+max_tiles_per_frame: 1
+# Execution device.
+device: cuda:0
+# Annotation files and their dataset/split identity.
+annotation_sets:
+  - path: raw_annotations/ucf_database_train.json
+    dataset: ucf-crime
+    split: train
+  - path: raw_annotations/ucf_database_test.json
+    dataset: ucf-crime
+    split: test
+  - path: raw_annotations/xd_database_train.json
+    dataset: xd-violence
+    split: train
+  - path: raw_annotations/xd_database_test.json
+    dataset: xd-violence
+    split: test
+# Candidate source-video layouts, relative to data_root.
+video_templates:
+  - videos/{dataset}/videos/{split}/{video_id}.mp4
+  - videos/{dataset}/videos/{video_id}.mp4

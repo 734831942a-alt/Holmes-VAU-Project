@@ -1,0 +1,9 @@
+{
+  "n_generated": 66,
+  "reviewed_at": "2026-09-21T08:47:15.648403+00:00",
+  "raw_sample_sha256": "425a12576019651ba9592518d6a84547bfc7d2f018ddcbfeb87b9b0f126e36df",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "已审看8条：二轮8.28–10.68、施工22.0–26.88正确提取；其余未给完整区间，no_interval符合原文。两条拥堵回答在逗号结束，32个实际生成token且无EOS，truncated=true依据充分。窗口50条异常/畸形/空输出为0，截断0.20，未触发A2门；格式不合规不暂停。",
+  "signals_after_raw_review": []
+}

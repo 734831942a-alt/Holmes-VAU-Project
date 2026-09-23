@@ -1,0 +1,51 @@
+data_config: configs/data.yaml
+b0_config: configs/b0_selfdata.yaml
+a1_config: configs/b0_reparse_v2.yaml
+a1_eos_token_id: 99
+a1_mock_token_ids: [7, 99]
+test_results: results/spec04/tests.json
+timeline_cases:
+  - {pts: [90000, 93600, 100800], time_base: '1/90000', expected: [0.0, 0.04, 0.12]}
+  - {pts: [-1800, 0, 1800], time_base: '1/90000', expected: [0.0, 0.02, 0.04]}
+bad_timelines:
+  - [100, 90, 200]
+  - [100]
+  - [100, null, 200]
+test_time_base: '1/1000'
+invalid_outputs: ['无法确定异常时间', 'START=10, END=3', 'START=0, END=10 START=2, END=4']
+valid_output: 'START=0, END=9999'
+valid_start: 0
+valid_end: 9999
+frames_seen: 12
+fixture_prediction_path: predictions.jsonl
+fixture_video_id: failed-sample
+integration_frame_indices: [0, 1, 2]
+integration_category: 拥堵
+integration_group: 相机样例
+integration_manifest_file: manifest.jsonl
+integration_data_config_file: data.yaml
+integration_b0_config_file: b0.yaml
+integration_splits_file: splits.json
+integration_timeline_file: timeline.jsonl
+integration_output_dir: b0
+integration_source_file: source.mp4
+cache_file: cache.jsonl
+old_source_dir: original
+new_source_dir: replacement
+fixture_rows:
+  - {video_id: '拥堵_20240101000000_突发事件_100', camera_group: camera-a}
+  - {video_id: '多车事故_20240101000001_突发事件_100', camera_group: camera-b}
+  - {video_id: '拥堵_20240101000002_突发事件_101', camera_group: camera-a}
+  - {video_id: '抛洒物_20240101000003_运行安全_102', camera_group: camera-c}
+  - {video_id: '拥堵_20240101000004_突发事件_103', camera_group: camera-d}
+  - {video_id: '拥堵_20240101000005_突发事件_104', camera_group: camera-e}
+  - {video_id: '拥堵_20240101000006_突发事件_105', camera_group: camera-f}
+  - {video_id: '拥堵_20240101000007_突发事件_106', camera_group: camera-g}
+  - {video_id: '拥堵_20240101000008_突发事件_107', camera_group: camera-h}
+  - {video_id: '拥堵_20240101000009_突发事件_108', camera_group: camera-i}
+ocr_fixtures:
+  - {video_id: exact1, normalized: 枪机甲甲, confidence: 0.95, eligible: true}
+  - {video_id: exact2, normalized: 枪机甲甲, confidence: 0.96, eligible: true}
+  - {video_id: boundary, normalized: 枪机甲乙, confidence: 0.97, eligible: true}
+  - {video_id: distant, normalized: 枪机乙乙, confidence: 0.98, eligible: true}
+  - {video_id: low, normalized: 不可信文字, confidence: 0.10, eligible: false}

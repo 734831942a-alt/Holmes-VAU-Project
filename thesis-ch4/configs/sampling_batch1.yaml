@@ -1,0 +1,28 @@
+# Source directory: only cleaned fixed-camera clips are eligible.
+data_root: /root/autodl-tmp/高架桥数据/video_fixed
+# Original source directory is used only to count source entries without a fixed counterpart.
+source_root: /root/autodl-tmp/高架桥数据/video
+# Derived-copy directories are excluded from the sampling universe and counted for the report.
+excluded_derived_roots:
+  - /root/autodl-tmp/高架桥数据/video_preview_10_per_class
+  - /root/autodl-tmp/高架桥数据/e8_multicar_case_study
+# Output files.
+manifest_path: /root/thesis-ch4/data/manifest_batch1.jsonl
+report_path: /root/thesis-ch4/data/batch1_sampling_report.md
+# Reproducible stratified sample settings.
+seed: 42
+per_category: 10
+min_duration_seconds: 25
+max_duration_seconds: 70
+min_night_per_category: 3
+night_hours: [0, 1, 2, 3, 4, 5, 20, 21, 22, 23]
+batch: batch1
+# Filename schema: category, 14-digit timestamp, event source, record id.
+filename_pattern: '^(?P<category>.+?)_(?P<timestamp>[0-9]{14})_.*[.]mp4$'
+categories:
+  - 二轮车辆闯入
+  - 占道施工
+  - 多车事故
+  - 异常停车
+  - 抛洒物
+  - 拥堵

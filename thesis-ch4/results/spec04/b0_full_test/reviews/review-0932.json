@@ -1,0 +1,9 @@
+{
+  "n_generated": 932,
+  "reviewed_at": "2026-09-21T11:14:00.366210+00:00",
+  "raw_sample_sha256": "61d3584873cfe170f9135bd2b8b95634616487829ecd342e91a9d30ebc91af71",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "最终8条审看：8.28–10.64、21.96–26.84、22.5–23.4、22.44s与27.4s respectively、8.56–11.04秒五个区间均正确解析；其余3条无区间。8条均EOS，token计数和末ID一致，未见有效区间误拒。四项门未触发。932条均已完成，批准仅进入离线报告与验收，不追加推理。",
+  "signals_after_raw_review": []
+}

@@ -1,0 +1,18 @@
+{
+  "torch_version": "2.11.0+cu128",
+  "torch_cuda_version": "12.8",
+  "cuda_available": true,
+  "cudnn_version": 91900,
+  "device_count": 1,
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 5090",
+      "uuid": "GPU-c3c84fd4-88d5-253b-6a9f-ebb8c1c7ec5f",
+      "driver_version": "595.71.05",
+      "memory_total_mib": 32607,
+      "memory_free_mib": 32110,
+      "compute_capability": "12.0"
+    }
+  ]
+}

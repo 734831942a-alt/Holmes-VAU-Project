@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SPEC-02 时序标注</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:1100px;margin:20px auto;padding:0 16px;background:#f4f5f7;color:#202124}
+main{background:white;padding:20px;border-radius:10px;box-shadow:0 1px 5px #bbb}
+video{width:100%;max-height:620px;background:#111}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+label{display:flex;flex-direction:column;gap:4px}
+button,input,select,textarea{font:inherit;padding:8px}
+.buttons{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.status{font-weight:600;margin:8px 0}
+.error{color:#b00020;white-space:pre-wrap}
+small{color:#555}
+</style>
+</head>
+<body><main>
+<h1>Batch 1 人工时序标注</h1>
+<div id="status" class="status">载入中…</div>
+<div id="work" hidden>
+<p>类别：<strong id="category"></strong>　视频：<span id="videoId"></span></p>
+<video id="video" controls preload="metadata"></video>
+<p>当前时间：<span id="current">0.000</span>s / <span id="total">0.000</span>s</p>
+<div class="buttons">
+<button id="markStart">标记起点 [</button>
+<button id="markEnd">标记终点 ]</button>
+<button id="replay">回放已选区间</button>
+</div>
+<div class="grid">
+<label>异常起点（秒，必填）<input id="tStart" type="number" min="0" step="0.001"></label>
+<label>异常终点（秒，必填）<input id="tEnd" type="number" min="0" step="0.001"></label>
+<label>起点在片段内可见（必选）
+<select id="observable"><option value="">请选择</option><option value="true">是</option><option value="false">否</option></select>
+</label>
+<label>异常覆盖整个片段（必选）
+<select id="whole"><option value="">请选择</option><option value="true">是</option><option value="false">否</option></select>
+</label>
+<label>标注者（必填）<input id="annotator" autocomplete="name"></label>
+<label>备注（可选）<textarea id="notes" rows="3"></textarea></label>
+</div>
+<div class="buttons"><button id="submit">提交并进入下一条</button></div>
+<p class="error" id="error"></p>
+<small>键盘快捷键：左方括号 [ 标记起点，右方括号 ] 标记终点。时间值从不自动预填。</small>
+</div>
+</main>
+<script>
+var item=null;
+var video=document.getElementById("video");
+var statusEl=document.getElementById("status");
+var work=document.getElementById("work");
+var errorEl=document.getElementById("error");
+var annotator=document.getElementById("annotator");
+annotator.value=localStorage.getItem("spec02-annotator") || "";
+
+function val(id){return document.getElementById(id).value;}
+function boolVal(id){var x=val(id);return x===""?null:x==="true";}
+function clearForm(){
+  document.getElementById("tStart").value="";
+  document.getElementById("tEnd").value="";
+  document.getElementById("observable").value="";
+  document.getElementById("whole").value="";
+  document.getElementById("notes").value="";
+  errorEl.textContent="";
+}
+async function loadNext(){
+  var response=await fetch("/api/next");
+  item=await response.json();
+  if(item.done){
+    statusEl.textContent="全部完成："+item.progress.completed+"/"+item.progress.total;
+    work.hidden=true; return;
+  }
+  clearForm();
+  statusEl.textContent="进度："+item.progress.completed+"/"+item.progress.total;
+  document.getElementById("category").textContent=item.category;
+  document.getElementById("videoId").textContent=item.video_id;
+  document.getElementById("total").textContent=Number(item.duration).toFixed(3);
+  video.src="/video?id="+encodeURIComponent(item.video_id);
+  work.hidden=false;
+}
+video.addEventListener("timeupdate",function(){
+  document.getElementById("current").textContent=video.currentTime.toFixed(3);
+});
+document.getElementById("markStart").onclick=function(){
+  document.getElementById("tStart").value=video.currentTime.toFixed(3);
+};
+document.getElementById("markEnd").onclick=function(){
+  document.getElementById("tEnd").value=video.currentTime.toFixed(3);
+};
+document.getElementById("replay").onclick=function(){
+  var start=Number(val("tStart")); var end=Number(val("tEnd"));
+  if(!Number.isFinite(start)||!Number.isFinite(end)||end<=start){errorEl.textContent="请先人工标记有效起止时间。";return;}
+  video.currentTime=start; video.play();
+  var stop=function(){if(video.currentTime>=end){video.pause();video.removeEventListener("timeupdate",stop);}};
+  video.addEventListener("timeupdate",stop);
+};
+document.addEventListener("keydown",function(event){
+  if(event.target.tagName==="INPUT"||event.target.tagName==="TEXTAREA"||event.target.tagName==="SELECT")return;
+  if(event.key==="[")document.getElementById("markStart").click();
+  if(event.key==="]")document.getElementById("markEnd").click();
+});
+document.getElementById("submit").onclick=async function(){
+  errorEl.textContent="";
+  var observer=boolVal("observable"),whole=boolVal("whole");
+  if(val("tStart")===""||val("tEnd")===""||observer===null||whole===null||annotator.value.trim()===""){
+    errorEl.textContent="请填写起点、终点、标注者，并明确选择两个标志位。";return;
+  }
+  localStorage.setItem("spec02-annotator",annotator.value.trim());
+  var payload={
+    video_id:item.video_id,t_start:Number(val("tStart")),t_end:Number(val("tEnd")),
+    start_observable:observer,spans_whole_clip:whole,notes:val("notes"),
+    annotator:annotator.value.trim(),session_id:item.session_id
+  };
+  var response=await fetch("/api/annotation",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+  var body=await response.json();
+  if(!response.ok){errorEl.textContent=body.error||"提交失败";return;}
+  await loadNext();
+};
+loadNext().catch(function(error){errorEl.textContent=String(error);});
+</script>
+</body></html>

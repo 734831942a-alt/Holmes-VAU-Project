@@ -1,0 +1,9 @@
+{
+  "n_generated": 116,
+  "reviewed_at": "2026-09-21T08:52:11.111731+00:00",
+  "raw_sample_sha256": "e2ee1b6e12819858e74ddbb009155a9360385ecfbf8e8fc8bc807a5bcb27fd21",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "已审看8条原文与实际token证据：4条明确秒区间6.0–8.44、7.36–12.28、2.48–7.48、2.44–7.32均提取正确；其余为明确未定位或32token截断叙述，no_interval与原文一致。EOS/长度/末token一致，窗口截断0.16，其余错误率0，无实现错误信号。",
+  "signals_after_raw_review": []
+}

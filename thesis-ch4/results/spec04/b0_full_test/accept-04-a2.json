@@ -1,0 +1,74 @@
+{
+  "spec": "SPEC-04-A2",
+  "checks": [
+    {
+      "id": "8.1",
+      "criterion": "覆盖等于 932 才 complete",
+      "passed": true,
+      "evidence": {
+        "coverage": 932,
+        "interrupted": []
+      }
+    },
+    {
+      "id": "8.2",
+      "criterion": "protected before/after unchanged",
+      "passed": true,
+      "evidence": {
+        "count": 69,
+        "changed": []
+      }
+    },
+    {
+      "id": "8.3",
+      "criterion": "全 932 权威停止证据与判定序",
+      "passed": true,
+      "evidence": {
+        "stop_reasons": {
+          "eos": 829,
+          "max_new_tokens": 103
+        },
+        "malformed": 0
+      }
+    },
+    {
+      "id": "8.4",
+      "criterion": "312 重叠视频可复现性诊断已产出",
+      "passed": true,
+      "evidence": {
+        "compared": 312,
+        "rate": 1.0,
+        "rate_is_not_a_gate": true
+      }
+    },
+    {
+      "id": "8.5",
+      "criterion": "账本 generated + interrupted = n_test = 932 且无重复调用",
+      "passed": true,
+      "evidence": {
+        "n_test": 932,
+        "n_generated": 932,
+        "n_interrupted": 0,
+        "attempted": 932
+      }
+    },
+    {
+      "id": "8.6",
+      "criterion": "新产物只写新目录，旧产物逐字节不变",
+      "passed": true,
+      "evidence": {
+        "generation_dir": "results/b0_full_test",
+        "measurement_dir": "results/spec04/b0_full_test"
+      }
+    }
+  ],
+  "complete": true,
+  "n_test": 932,
+  "n_generated": 932,
+  "n_interrupted": 0,
+  "interrupted": [],
+  "monitor_reviews_complete": true,
+  "generation_config_unchanged": true,
+  "status": "passed",
+  "issues": []
+}

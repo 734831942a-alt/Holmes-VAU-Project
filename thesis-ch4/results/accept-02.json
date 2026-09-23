@@ -1,0 +1,142 @@
+{
+  "spec": "SPEC-02",
+  "generated_at": "2026-09-15T01:38:24+08:00",
+  "scope_completed": [
+    "3.1",
+    "3.2"
+  ],
+  "overall_status": "awaiting_manual_annotation",
+  "summary": {
+    "passed": 6,
+    "pending": 1,
+    "not_run": 2,
+    "total": 9
+  },
+  "checks": [
+    {
+      "id": 1,
+      "criterion": "data/manifest_batch1.jsonl 行数 == 60",
+      "status": "pass",
+      "passed": true,
+      "evidence": {
+        "manifest_lines": 60,
+        "unique_video_ids": 60,
+        "schema_ok": true
+      }
+    },
+    {
+      "id": 2,
+      "criterion": "每类样本数 == 10，且每类夜间样本数 >= 3",
+      "status": "pass",
+      "passed": true,
+      "evidence": {
+        "category_counts": {
+          "二轮车辆闯入": 10,
+          "占道施工": 10,
+          "多车事故": 10,
+          "异常停车": 10,
+          "抛洒物": 10,
+          "拥堵": 10
+        },
+        "night_counts": {
+          "二轮车辆闯入": 4,
+          "占道施工": 10,
+          "多车事故": 3,
+          "异常停车": 4,
+          "抛洒物": 5,
+          "拥堵": 3
+        }
+      }
+    },
+    {
+      "id": 3,
+      "criterion": "manifest 中所有 duration 均在 [25, 70] 秒",
+      "status": "pass",
+      "passed": true,
+      "evidence": {
+        "duration_min": 28.04,
+        "duration_max": 61.96,
+        "out_of_range_count": 0
+      }
+    },
+    {
+      "id": 4,
+      "criterion": "重跑抽样脚本与首次产出逐行一致",
+      "status": "pass",
+      "passed": true,
+      "evidence": {
+        "seed": 42,
+        "comparison": "byte-identical",
+        "first_sha256": "3fd0b335ba21d62d3a1f70b010b6857a07f1461282ecb6a5226fae8e7bc75ef5",
+        "rerun_sha256": "3fd0b335ba21d62d3a1f70b010b6857a07f1461282ecb6a5226fae8e7bc75ef5",
+        "rerun_output": "/tmp/manifest_batch1_rerun.jsonl"
+      }
+    },
+    {
+      "id": 5,
+      "criterion": "标注工具启动，2 条样例完成标注、落盘及重启后跳过",
+      "status": "pass",
+      "passed": true,
+      "evidence": {
+        "test_storage": "/tmp/spec02-annotation-test-hlke1a7b",
+        "submitted_records": 2,
+        "restart_skipped_completed": true,
+        "page_temporal_fields_initially_blank": true,
+        "video_range_http_status": 206,
+        "production_annotations_bytes_after_test": 0,
+        "annotation_source": "explicit synthetic integration-test values in /tmp only; no model-generated or prefilled labels"
+      }
+    },
+    {
+      "id": 6,
+      "criterion": "data/annotations_batch1.jsonl 行数 == manifest 行数",
+      "status": "pending_manual_annotation",
+      "passed": false,
+      "evidence": {
+        "annotation_lines": 0,
+        "manifest_lines": 60,
+        "reason": "SPEC-02 3.2 requires delivery and stop before human annotation; no temporal annotation was generated or prefilled"
+      }
+    },
+    {
+      "id": 7,
+      "criterion": "results/b0/metrics.json 包含全部字段、anomaly_ratio 与 by_category",
+      "status": "not_run",
+      "passed": false,
+      "evidence": {
+        "file_exists": false,
+        "reason": "SPEC-02 3.3 is explicitly deferred until human annotation is complete"
+      }
+    },
+    {
+      "id": 8,
+      "criterion": "results/b0/predictions.jsonl 行数 == 标注条数",
+      "status": "not_run",
+      "passed": false,
+      "evidence": {
+        "file_exists": false,
+        "reason": "SPEC-02 3.3 was not executed"
+      }
+    },
+    {
+      "id": 9,
+      "criterion": "/root/autodl-tmp/高架桥数据 下无任何文件被修改",
+      "status": "pass",
+      "passed": true,
+      "evidence": {
+        "baseline_marker": "/tmp/spec02-data-start",
+        "command": "find /root/autodl-tmp/高架桥数据 -newer /tmp/spec02-data-start -printf %p\\n",
+        "modified_files": [],
+        "modified_file_count": 0
+      }
+    }
+  ],
+  "constraints": {
+    "b0_data_source": "self-collected high-bridge video_fixed; HIVAU-70k not used",
+    "model_generated_or_prefilled_temporal_annotations": false,
+    "source_data_modified": false,
+    "dependencies_installed_or_upgraded": false,
+    "flash_attn_installed": false,
+    "b0_executed": false
+  }
+}

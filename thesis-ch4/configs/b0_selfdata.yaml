@@ -1,0 +1,29 @@
+# Frozen before the first B0 inference. No prompt tuning or retries.
+data_config: configs/data.yaml
+model_path: /root/autodl-tmp/HolmesVAU-master/ckpts/HolmesVAU-2B
+device: cuda:0
+num_frames: 12
+input_size: 448
+max_tiles_per_frame: 1
+max_new_tokens: 32
+temperature: 0
+torch_threads: 4
+predictions_file: predictions.jsonl
+metrics_file: metrics.json
+attempts_file: attempts.jsonl
+run_file: run.json
+pilot_file: pilot30.json
+pilot_enabled: false
+preflight_output: results/spec04/model-preflight.json
+prompt_template: |
+  Locate the event of category "{category}" in this video. The category is a query condition, not a ground-truth interval.
+  All times are seconds relative to the first decoded video frame (time 0). The last decoded frame is at {duration_sec} seconds.
+  The sampled frame times in seconds are: {frame_times}.
+  Return only the anomalous event's start and end time in seconds in exactly this format: START=<seconds>, END=<seconds>
+frame_time_template: 'Frame{index}={time_sec}'
+frame_time_separator: ', '
+parse_regex: 'START\s*=\s*(?P<start>[+-]?(?:\d+(?:\.\d*)?|\.\d+))\s*,\s*END\s*=\s*(?P<end>[+-]?(?:\d+(?:\.\d*)?|\.\d+))'
+format_regex: 'START=(?P<start>[+-]?(?:\d+(?:\.\d*)?|\.\d+)), END=(?P<end>[+-]?(?:\d+(?:\.\d*)?|\.\d+))'
+full_clip_tolerance_sec: 1.0
+distribution_quantiles: [0.05, 0.25, 0.5, 0.75, 0.95]
+progress_every: 25

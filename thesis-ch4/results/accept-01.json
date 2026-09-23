@@ -1,0 +1,102 @@
+{
+  "spec": "SPEC-01",
+  "status": "blocked",
+  "stop_condition_3_2_a_triggered": false,
+  "summary": {
+    "passed": 6,
+    "failed": 3,
+    "total": 9,
+    "blocker": "HIVAU-70k raw UCF-Crime/XD-Violence source videos are absent; B0 cannot be run without substituting or fabricating data."
+  },
+  "checks": [
+    {
+      "id": 1,
+      "criterion": "results/env-snapshot/ 三个文件存在且非空",
+      "passed": true,
+      "evidence": {
+        "environment.yml_bytes": 3737,
+        "requirements.txt_bytes": 2028,
+        "hardware.json_bytes": 426
+      }
+    },
+    {
+      "id": 2,
+      "criterion": "results/probe-hivau.md 明确给出字段名与时间单位，并附 3 条真实样例",
+      "passed": true,
+      "evidence": "报告说明 events 为秒级事件边界，fps 来自逐视频字段，含 3 条真实 JSON 片段。"
+    },
+    {
+      "id": 3,
+      "criterion": "results/probe-bridge-data.md 给出原始长视频的存在性结论与时长分布",
+      "passed": true,
+      "evidence": "报告给出 video/ 中 >60s 文件数、min/median/max、分辨率、fps、六类分布和 27 个探测失败说明。"
+    },
+    {
+      "id": 4,
+      "criterion": "src/ 下四个模块存在，每个文件头含来源路径与 commit hash",
+      "passed": true,
+      "evidence": [
+        "src/model/holmesvau_infer.py",
+        "src/evidence/ovd_extract.py",
+        "src/evidence/queries.py",
+        "src/eval/metrics_cls.py"
+      ],
+      "source_commit": "8b98e6cda09d078061eb308d78feec75fa23e6fd"
+    },
+    {
+      "id": 5,
+      "criterion": "python -c \"from src.evidence.queries import LABELS; assert len(LABELS)==6\" 通过",
+      "passed": true,
+      "command_exit_code": 0
+    },
+    {
+      "id": 6,
+      "criterion": "grep -r \"HolmesVAU-master\" src/ 无结果",
+      "passed": true,
+      "command_exit_code": 1,
+      "note": "grep exit 1 means no matches."
+    },
+    {
+      "id": 7,
+      "criterion": "results/b0/metrics.json 含全部六项指标",
+      "passed": false,
+      "evidence": "文件未生成。B0 预检在模型加载前发现 seed=42 抽取的 200/200 源视频缺失。",
+      "issue": "issues/01-hivau-videos-missing.md"
+    },
+    {
+      "id": 8,
+      "criterion": "results/b0/predictions.jsonl 行数 == 200",
+      "passed": false,
+      "evidence": "文件未生成；没有把缺失视频伪装成解析失败，也没有使用片段级/桥梁数据替代。",
+      "issue": "issues/01-hivau-videos-missing.md"
+    },
+    {
+      "id": 9,
+      "criterion": "在第三章目录执行 git status --porcelain 输出为空",
+      "passed": false,
+      "command": "git -C /root/autodl-tmp/HolmesVAU-master status --porcelain",
+      "output": [
+        "?? benchmark_ovd_efficiency.py",
+        "?? bridge_experiment_results/e9_multicar_clean_v1/traffic_eval_baseline_clean350_v1.json",
+        "?? bridge_experiment_results/e9_multicar_clean_v1/traffic_test_pred_baseline_clean350_v1.jsonl",
+        "?? bridge_experiment_results/e9_multicar_clean_v1/traffic_test_pred_baseline_clean350_v1_smoke.jsonl",
+        "?? internvl_chat/shell/holmesvau_data_baseline.json",
+        "?? run_autodl_baseline_500.sh",
+        "?? tools/correct_predictions_e9_final.csv",
+        "?? tools/extract_frames_autodl.py",
+        "?? tools/select_representative_cases.py"
+      ],
+      "note": "这些未跟踪文件位于冻结仓库且保持原状；本次任务未修改、删除或清理它们。"
+    }
+  ],
+  "issues": [
+    "issues/01-vocab-conflict.md",
+    "issues/01-hivau-videos-missing.md"
+  ],
+  "runtime_notes": [
+    "flash-attn 未安装且未尝试安装。",
+    "HolmesVAU 权重配置请求 flash_attention_2；移植加载器按 §6 显式使用 eager attention。",
+    "未训练、未 LoRA 微调、未调优提示、未重试、未做预测后处理。",
+    "全量桥梁媒体扫描在 5 分钟内完成；服务器无 tmux，因此使用 295 秒硬超时前台执行并记录 logs/probe-bridge.log。"
+  ]
+}

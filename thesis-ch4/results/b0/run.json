@@ -1,0 +1,8 @@
+{
+  "config_sha256": "0eadf218976038fdbff2e1e2d52777f25a396a4f6c16825d62f2e4a974c4d9b9",
+  "manifest_sha256": "877a0797f880f3c76e20053a2afacf36c43255a52367a19fabd7e9363f909cb9",
+  "split": "test",
+  "model": "/root/autodl-tmp/HolmesVAU-master/ckpts/HolmesVAU-2B",
+  "prompt_template": "Locate the event of category \"{category}\" in this video. The category is a query condition, not a ground-truth interval.\nAll times are seconds relative to the first decoded video frame (time 0). The last decoded frame is at {duration_sec} seconds.\nThe sampled frame times in seconds are: {frame_times}.\nReturn only the anomalous event's start and end time in seconds in exactly this format: START=<seconds>, END=<seconds>\n",
+  "data_config_sha256": "114a113e398f9dd6db8f54bb635f109f27fd358bf53784bb2a621250374f8954"
+}

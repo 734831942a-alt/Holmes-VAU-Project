@@ -1,0 +1,9 @@
+{
+  "n_generated": 916,
+  "reviewed_at": "2026-09-21T11:11:48.957139+00:00",
+  "raw_sample_sha256": "454ac4318b6f7ffa4b9a77afa23b2203eea98ecd8560e502299e7f2db2916368",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "审看8条：两条8.28–10.64、12.48–17.44、20.5–22.5秒共4个区间均正确解析；22.12秒单点正确拒绝；其余3条无区间。8条均EOS且token计数与末ID一致。未见有效区间误拒，四项监控门未触发。",
+  "signals_after_raw_review": []
+}

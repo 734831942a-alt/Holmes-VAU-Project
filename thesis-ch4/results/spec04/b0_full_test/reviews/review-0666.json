@@ -1,0 +1,9 @@
+{
+  "n_generated": 666,
+  "reviewed_at": "2026-09-21T10:51:02.631713+00:00",
+  "raw_sample_sha256": "90f74c6691a48a9142119cdaf2d090f54111640042d69bd32d9861a27b3c8a5e",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "8条逐条审看：2.44–7.32、6.0–8.4、16.92–21.76、21.72–31.4秒四个区间均正确解析，其余4条无区间。全部EOS结束，实际token计数与末ID一致。未见有效区间误拒，四项阈值未触发。",
+  "signals_after_raw_review": []
+}

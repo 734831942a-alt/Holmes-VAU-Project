@@ -1,0 +1,367 @@
+{
+  "spec": "SPEC-04-A1",
+  "status": "passed",
+  "implementation_complete": true,
+  "scope_notice": "312/932 顺序前缀、类别仅二轮 221 + 施工 91、不可外推全 test",
+  "checks": [
+    {
+      "id": "E.1",
+      "criterion": "312 条复算及原因码直方图，逐条可重现",
+      "passed": true,
+      "status": "PASS",
+      "evidence": {
+        "layer_a_pass_count": 188,
+        "layer_a_failure_histogram": {
+          "no_interval": 117,
+          "single_point": 5,
+          "multi_interval": 0,
+          "missing_unit": 1,
+          "ambiguous_clock": 1
+        },
+        "layer_b_histogram": {
+          "valid": 188,
+          "reverse_order": 0,
+          "zero_duration": 0
+        },
+        "reproduced": true
+      }
+    },
+    {
+      "id": "E.2",
+      "criterion": "原 predictions/metrics SHA-256 与修订前相同",
+      "passed": true,
+      "status": "PASS",
+      "evidence": {
+        "results/b0/predictions.jsonl": {
+          "before_sha256": "a5ea7a01223f8e99ee50ac1a747a5414abd704085b6246c30432efeb9e5d2c7a",
+          "after_sha256": "a5ea7a01223f8e99ee50ac1a747a5414abd704085b6246c30432efeb9e5d2c7a",
+          "unchanged": true
+        },
+        "results/b0/metrics.json": {
+          "before_sha256": "fa396fc26ac0cf6c5de034970fa041ad24ca2b4387ae4e30e84a974f10cf922d",
+          "after_sha256": "fa396fc26ac0cf6c5de034970fa041ad24ca2b4387ae4e30e84a974f10cf922d",
+          "unchanged": true
+        }
+      }
+    },
+    {
+      "id": "E.3",
+      "criterion": "各结果文件头声明顺序前缀、类别与不可外推",
+      "passed": true,
+      "status": "PASS",
+      "evidence": {
+        "results/spec04/reparse_v2/predictions.json": true,
+        "results/spec04/reparse_v2/metrics.json": true,
+        "results/spec04/reparse_v2/reason_histogram.json": true,
+        "results/spec04/reparse_v2/report.md": true,
+        "results/spec04/reparse_v2/audit.json": true
+      }
+    },
+    {
+      "id": "E.4",
+      "criterion": "format_ok_rate 仍为 0，严格格式定义不变",
+      "passed": true,
+      "status": "PASS",
+      "evidence": {
+        "format_ok_rate": 0.0,
+        "source_format_regex": "START=(?P<start>[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)), END=(?P<end>[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+))"
+      }
+    },
+    {
+      "id": "E.5",
+      "criterion": "Layer A/B 每条允许和拒绝规则的单测",
+      "passed": true,
+      "status": "PASS",
+      "evidence": {
+        "cases": [
+          "start_end",
+          "start_end_whitespace",
+          "starts",
+          "begins",
+          "from_to",
+          "dash_s",
+          "dash_chinese",
+          "decimal",
+          "no_interval",
+          "single_point",
+          "multi_interval",
+          "repeated_same_pair",
+          "multi_mixed",
+          "missing_end_unit",
+          "missing_start_unit",
+          "from_without_units",
+          "range_without_units",
+          "ambiguous_clock",
+          "interval_and_clock",
+          "reverse_order",
+          "zero_duration",
+          "out_of_range",
+          "zero_out_of_range",
+          "negative_start",
+          "negative_dash",
+          "exponent",
+          "no_guess_seconds",
+          "explicit_start_end_respectively",
+          "explicit_seconds_range",
+          "explicit_seconds_range_reverse",
+          "unrelated_two_numbers",
+          "respectively_missing_unit",
+          "explicit_range_missing_unit"
+        ],
+        "tests_successful": true
+      }
+    },
+    {
+      "id": "E.6",
+      "criterion": "stop_reason EOS→预算→other 三分支",
+      "passed": true,
+      "status": "PASS",
+      "evidence": {
+        "required_tests": [
+          "test_stop_reason_eos_wins_at_budget_and_before_last",
+          "test_stop_reason_max_new_tokens",
+          "test_stop_reason_other_and_prefix_formula"
+        ]
+      }
+    },
+    {
+      "id": "E.7",
+      "criterion": "312 条 stop_reason=unknown，绝不回填权威证据",
+      "passed": true,
+      "status": "PASS",
+      "evidence": {
+        "unknown_count": 312,
+        "truncation_suspected_count": 27,
+        "authoritative_backfill_count": 0
+      }
+    }
+  ],
+  "additional_checks": {
+    "all_protected_sha256_unchanged": true,
+    "spec_body_hash_matches": true,
+    "result_configuration_matches": true,
+    "budget_unchanged": true,
+    "ledger_consistent": true,
+    "future_recording_integration_tests_passed": true,
+    "b0_stays_incomplete": true
+  },
+  "n_attempted": 313,
+  "n_persisted": 312,
+  "n_interrupted": 1,
+  "interrupted": [
+    "占道施工_20231116003401_运行安全_35106758"
+  ],
+  "complete": false,
+  "b0_full_test_coverage": {
+    "status": "FAIL",
+    "persisted": 312,
+    "expected": 932
+  },
+  "protected_files": {
+    ".gitignore": {
+      "before_sha256": "ad10bf3102be9850d795ac1b572aa8aa114a40df63d44caf7ee662c911c89de6",
+      "after_sha256": "ad10bf3102be9850d795ac1b572aa8aa114a40df63d44caf7ee662c911c89de6",
+      "unchanged": true
+    },
+    "AGENTS.md": {
+      "before_sha256": "85897ff6d1d4dfd6d37d762b56409fa069a5761d8899c1e805d6686d3ced1e2e",
+      "after_sha256": "85897ff6d1d4dfd6d37d762b56409fa069a5761d8899c1e805d6686d3ced1e2e",
+      "unchanged": true
+    },
+    "configs/b0.yaml": {
+      "before_sha256": "018fa3f14a8ac5b8d9f4dedcf829c574dbb4e51dd4fb8990fa92714d256cc62a",
+      "after_sha256": "018fa3f14a8ac5b8d9f4dedcf829c574dbb4e51dd4fb8990fa92714d256cc62a",
+      "unchanged": true
+    },
+    "configs/b0_selfdata.yaml": {
+      "before_sha256": "804bce9fe7659ecb3357bcde8c59a5d3c4b5aa5e9cf83121a5b1f4a79704c0c1",
+      "after_sha256": "804bce9fe7659ecb3357bcde8c59a5d3c4b5aa5e9cf83121a5b1f4a79704c0c1",
+      "unchanged": true
+    },
+    "issues/01-hivau-videos-missing.md": {
+      "before_sha256": "eab02c98321fe85f6692061c3f31acb6a9a9d8768e42bb12390eba58c64df9df",
+      "after_sha256": "eab02c98321fe85f6692061c3f31acb6a9a9d8768e42bb12390eba58c64df9df",
+      "unchanged": true
+    },
+    "issues/01-vocab-conflict.md": {
+      "before_sha256": "36fa4b3ec20455a7ad20581dbfa326d463b599d54e6506976435346d8e5fb27e",
+      "after_sha256": "36fa4b3ec20455a7ad20581dbfa326d463b599d54e6506976435346d8e5fb27e",
+      "unchanged": true
+    },
+    "results/accept-01.json": {
+      "before_sha256": "048e3dac28e3d95b335ac69b1770a992b28ee07e4c044c6f22b727bdbb21bc6a",
+      "after_sha256": "048e3dac28e3d95b335ac69b1770a992b28ee07e4c044c6f22b727bdbb21bc6a",
+      "unchanged": true
+    },
+    "results/b0/attempts.jsonl": {
+      "before_sha256": "2179842e22d43ce3203976bc87c22510361cb94f109d92e432a084fff09d0502",
+      "after_sha256": "2179842e22d43ce3203976bc87c22510361cb94f109d92e432a084fff09d0502",
+      "unchanged": true
+    },
+    "results/b0/metrics.json": {
+      "before_sha256": "fa396fc26ac0cf6c5de034970fa041ad24ca2b4387ae4e30e84a974f10cf922d",
+      "after_sha256": "fa396fc26ac0cf6c5de034970fa041ad24ca2b4387ae4e30e84a974f10cf922d",
+      "unchanged": true
+    },
+    "results/b0/predictions.jsonl": {
+      "before_sha256": "a5ea7a01223f8e99ee50ac1a747a5414abd704085b6246c30432efeb9e5d2c7a",
+      "after_sha256": "a5ea7a01223f8e99ee50ac1a747a5414abd704085b6246c30432efeb9e5d2c7a",
+      "unchanged": true
+    },
+    "results/b0/run.json": {
+      "before_sha256": "cc6d758af6d492b9f9c0728817b1f5229884631fa9196fbdd0aa72450e516954",
+      "after_sha256": "cc6d758af6d492b9f9c0728817b1f5229884631fa9196fbdd0aa72450e516954",
+      "unchanged": true
+    },
+    "results/env-snapshot/environment.yml": {
+      "before_sha256": "d9e9d20465d37c89f1c2e412d802868b7c318fa743ce3c65d6e28f3070a40b1c",
+      "after_sha256": "d9e9d20465d37c89f1c2e412d802868b7c318fa743ce3c65d6e28f3070a40b1c",
+      "unchanged": true
+    },
+    "results/env-snapshot/hardware.json": {
+      "before_sha256": "d3bf2ef5aee9cb7f15214c31d501bc1253091a4e873e3fef24f39b2fd235ad52",
+      "after_sha256": "d3bf2ef5aee9cb7f15214c31d501bc1253091a4e873e3fef24f39b2fd235ad52",
+      "unchanged": true
+    },
+    "results/env-snapshot/requirements.txt": {
+      "before_sha256": "42f2ec0277de55336ad7e5512f1b2c3bc45820dd9f212da46ab33c120f184702",
+      "after_sha256": "42f2ec0277de55336ad7e5512f1b2c3bc45820dd9f212da46ab33c120f184702",
+      "unchanged": true
+    },
+    "results/inventory.md": {
+      "before_sha256": "cbf1f8027a08d831d5354a21b664ceacd64805cf58c00653a80ed8505c9225d3",
+      "after_sha256": "cbf1f8027a08d831d5354a21b664ceacd64805cf58c00653a80ed8505c9225d3",
+      "unchanged": true
+    },
+    "results/probe-bridge-data.md": {
+      "before_sha256": "6f1dbfea97feec76646d9a799e98d06516fe1f14dd1956532c713cecc3f5cced",
+      "after_sha256": "6f1dbfea97feec76646d9a799e98d06516fe1f14dd1956532c713cecc3f5cced",
+      "unchanged": true
+    },
+    "results/probe-hivau.md": {
+      "before_sha256": "b594f7feaa6b6e32f9ce1bd794a10834a4bb569806070a66f74bb75f2f1f5cd0",
+      "after_sha256": "b594f7feaa6b6e32f9ce1bd794a10834a4bb569806070a66f74bb75f2f1f5cd0",
+      "unchanged": true
+    },
+    "specs/SPEC-01.md": {
+      "before_sha256": "c0c34bd3873214fe4033433a338ed3a962152f827bfe5c4113e81fcc4177c03c",
+      "after_sha256": "c0c34bd3873214fe4033433a338ed3a962152f827bfe5c4113e81fcc4177c03c",
+      "unchanged": true
+    },
+    "specs/SPEC-04.md": {
+      "before_sha256": "09fba92ad69c1968b706588da089c6ca9ee5ad9c8b7f0490ca89696b73da4988",
+      "after_sha256": "09fba92ad69c1968b706588da089c6ca9ee5ad9c8b7f0490ca89696b73da4988",
+      "unchanged": true
+    },
+    "src/__init__.py": {
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    "src/eval/__init__.py": {
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    "src/eval/metrics_cls.py": {
+      "before_sha256": "b962f13ba1bd371b932ef1be6e636a4ea0a3839ae0b67f81d4b6d318bacffd1a",
+      "after_sha256": "b962f13ba1bd371b932ef1be6e636a4ea0a3839ae0b67f81d4b6d318bacffd1a",
+      "unchanged": true
+    },
+    "src/eval/run_b0.py": {
+      "before_sha256": "5ab39eae6bff39b8d041fc287e3a1b31e55ad35475d45a53fdb1e969f9106dae",
+      "after_sha256": "5ab39eae6bff39b8d041fc287e3a1b31e55ad35475d45a53fdb1e969f9106dae",
+      "unchanged": true
+    },
+    "src/evidence/__init__.py": {
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    "src/evidence/ovd_extract.py": {
+      "before_sha256": "9f9e25c387c63d64eba51e82ce63495b4880607edcb7b6f18b374befc43fb9a5",
+      "after_sha256": "9f9e25c387c63d64eba51e82ce63495b4880607edcb7b6f18b374befc43fb9a5",
+      "unchanged": true
+    },
+    "src/evidence/queries.py": {
+      "before_sha256": "73b7f586ab20ff5e5837e7b14c48988b802131a764e4d492af3f7a7d33327a0a",
+      "after_sha256": "73b7f586ab20ff5e5837e7b14c48988b802131a764e4d492af3f7a7d33327a0a",
+      "unchanged": true
+    },
+    "src/model/__init__.py": {
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    "src/model/holmesvau_infer.py": {
+      "before_sha256": "c546eb1dcc6ec3abd2e252400c4f5d3fe4f865a322aa0f8cac1066478df711e9",
+      "after_sha256": "c546eb1dcc6ec3abd2e252400c4f5d3fe4f865a322aa0f8cac1066478df711e9",
+      "unchanged": true
+    }
+  },
+  "tests": {
+    "run": 13,
+    "successful": true,
+    "test_names": [
+      "test_all_312_records_unknown_and_original_metrics_hash_unchanged",
+      "test_capture_forwards_actual_return_and_restores_on_error",
+      "test_capture_rejects_second_call_without_retry",
+      "test_every_layer_a_and_b_rule",
+      "test_future_cli_persists_evidence_and_never_retries",
+      "test_future_monitor_stops_after_small_batch",
+      "test_legacy_unknown_and_suspected_are_separate",
+      "test_original_b0_directory_is_rejected_before_loading_model",
+      "test_stop_reason_eos_wins_at_budget_and_before_last",
+      "test_stop_reason_max_new_tokens",
+      "test_stop_reason_other_and_prefix_formula",
+      "test_wrapper_returns_unchanged_text_and_never_reencodes",
+      "test_zero_outside_in_distributions_reverse_separate"
+    ],
+    "parser_cases": [
+      "start_end",
+      "start_end_whitespace",
+      "starts",
+      "begins",
+      "from_to",
+      "dash_s",
+      "dash_chinese",
+      "decimal",
+      "no_interval",
+      "single_point",
+      "multi_interval",
+      "repeated_same_pair",
+      "multi_mixed",
+      "missing_end_unit",
+      "missing_start_unit",
+      "from_without_units",
+      "range_without_units",
+      "ambiguous_clock",
+      "interval_and_clock",
+      "reverse_order",
+      "zero_duration",
+      "out_of_range",
+      "zero_out_of_range",
+      "negative_start",
+      "negative_dash",
+      "exponent",
+      "no_guess_seconds",
+      "explicit_start_end_respectively",
+      "explicit_seconds_range",
+      "explicit_seconds_range_reverse",
+      "unrelated_two_numbers",
+      "respectively_missing_unit",
+      "explicit_range_missing_unit"
+    ],
+    "test_config_sha256": "ecac6ae0de45c3ab0757f295de34ac872044a47279ddcca32fdd5f09aeb868fa",
+    "failures": [],
+    "errors": [],
+    "real_model_generations": 0
+  },
+  "model_generation_calls": 0,
+  "issues": [
+    "issues/04a1-contract-location.md",
+    "issues/04a1-frozen-guard.md",
+    "issues/04a1-parser-definition.md",
+    "issues/04a1-token-count-semantics.md"
+  ]
+}

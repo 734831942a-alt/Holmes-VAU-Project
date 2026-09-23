@@ -1,0 +1,9 @@
+{
+  "n_generated": 216,
+  "reviewed_at": "2026-09-21T09:01:55.961484+00:00",
+  "raw_sample_sha256": "602ef6412c9cd548457d060cc2ba9ac63d5afeba65b444aa25275fd9b126cd7e",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "审看8条原文：6.2–11.2秒、12.2–17.08秒两个完整区间均正确解析，其余6条明确未识别异常、无区间，拒绝符合A1；8条均以EOS结束，计数与ID末项一致。四项暂停信号未触发。",
+  "signals_after_raw_review": []
+}

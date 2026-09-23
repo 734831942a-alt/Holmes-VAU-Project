@@ -1,0 +1,16 @@
+{
+  "spec": "SPEC-04-A2",
+  "verified": true,
+  "n_attempted": 932,
+  "n_persisted": 932,
+  "unique_ids": 932,
+  "order_matches_run": true,
+  "generation_kwargs_match_frozen_budget_temperature_frames": true,
+  "all_authoritative_evidence_consistent": true,
+  "all_protected_hashes_currently_match": true,
+  "run_source_hashes_unchanged": true,
+  "checkpoint_count": 20,
+  "raw_outputs_reviewed": 160,
+  "exit_code": 0,
+  "issues": []
+}

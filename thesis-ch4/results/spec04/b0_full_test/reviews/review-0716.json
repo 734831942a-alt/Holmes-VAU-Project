@@ -1,0 +1,9 @@
+{
+  "n_generated": 716,
+  "reviewed_at": "2026-09-21T10:55:07.171867+00:00",
+  "raw_sample_sha256": "a136e5c569aba02c94263d8552ee315123095aac67c8597aed266f7424feea77",
+  "raw_samples_reviewed": 8,
+  "verdict": "continue",
+  "review_note": "8条原文审看：8.16–10.48、2.4–7.24、7.48–12.48秒三个区间均正确解析，其余5条无起止区间。1条32 token无EOS截断，其他7条EOS，证据一致；未发现有效区间误拒，四项监控门未触发。",
+  "signals_after_raw_review": []
+}

@@ -1,0 +1,10 @@
+*.mp4
+*.avi
+*.npz
+*.pth
+*.safetensors
+checkpoints/
+data/
+logs/
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,16 @@
+{
+  "run": 8,
+  "successful": true,
+  "failures": [],
+  "errors": [],
+  "test_names": [
+    "test_ambiguous_ocr_chain_and_low_confidence_stay_unknown",
+    "test_b0_resume_does_not_retry_failed_parse_or_drop_record",
+    "test_cross_split_leak_zero_and_source_events_indivisible",
+    "test_first_frame_zero_and_last_decoded_pts",
+    "test_new_source_root_cannot_reuse_old_timeline_cache",
+    "test_parse_failures_are_persisted_with_raw_text",
+    "test_parser_preserves_unbounded_output_without_clipping",
+    "test_test_membership_locked_across_order_and_seed_change"
+  ]
+}

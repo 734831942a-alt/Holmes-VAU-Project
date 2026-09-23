@@ -1,0 +1,7 @@
+{
+  "load_ok": true,
+  "model_class": "InternVLChatModel",
+  "tokenizer_class": "InternLM2Tokenizer",
+  "device": "cuda:0",
+  "predictions_made": 0
+}

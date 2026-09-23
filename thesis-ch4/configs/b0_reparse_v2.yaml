@@ -1,0 +1,72 @@
+spec: specs/SPEC-04-A1.md
+spec_sha256: c0b1e902ad2783a542b55f86a8c1a39e71527a5d690bdc0386710f315c13f2d4
+baseline: results/spec04/a1-before.json
+original_config: configs/b0_selfdata.yaml
+original_predictions: results/b0/predictions.jsonl
+original_metrics: results/b0/metrics.json
+attempts: results/b0/attempts.jsonl
+manifest: data/manifest.jsonl
+splits: data/splits.json
+diagnosis: results/spec04/b0-diagnosis.json
+output_dir: results/spec04/reparse_v2
+predictions_file: predictions.json
+metrics_file: metrics.json
+histogram_file: reason_histogram.json
+report_file: report.md
+audit_file: audit.json
+acceptance: results/spec04/accept-04-a1.json
+tests_result: results/spec04/tests-04-a1.json
+tests_config: configs/test04_a1.yaml
+required_parser_tests: [start_end, starts, begins, from_to, dash_s, dash_chinese, no_interval, single_point, multi_interval, missing_end_unit, ambiguous_clock, reverse_order, zero_duration, out_of_range]
+required_stop_tests: [test_stop_reason_eos_wins_at_budget_and_before_last, test_stop_reason_max_new_tokens, test_stop_reason_other_and_prefix_formula]
+required_integration_tests: [test_capture_forwards_actual_return_and_restores_on_error, test_wrapper_returns_unchanged_text_and_never_reencodes, test_future_cli_persists_evidence_and_never_retries, test_all_312_records_unknown_and_original_metrics_hash_unchanged, test_future_monitor_stops_after_small_batch, test_original_b0_directory_is_rejected_before_loading_model]
+issue_dir: issues
+issue_name: 04a1-execution-conflict.md
+scope_notice: '312/932 顺序前缀、类别仅二轮 221 + 施工 91、不可外推全 test'
+expected_persisted: 312
+expected_attempted: 313
+expected_interrupted: 1
+expected_test: 932
+expected_categories: {二轮车辆闯入: 221, 占道施工: 91}
+max_new_tokens: 32
+distribution_quantiles: [0.05, 0.25, 0.5, 0.75, 0.95]
+full_clip_tolerance_sec: 1.0
+sentence_endings: ['.', '!', '?']
+monitor:
+  first_batch: 8
+  every: 50
+  preview_chars: 240
+future_monitor:
+  first_batch: 8
+  every: 25
+  parse_fail_pause_rate: 0.5
+  format_fail_pause_rate: 0.9
+  truncated_pause_rate: 0.25
+grammar:
+  # A1's governing condition is one unambiguous pair of nonnegative seconds.
+  # The four listed examples are required coverage, not a closed whitelist.
+  number: '(?:\d+(?:\.\d*)?|\.\d+)'
+  left_boundary: '(?<![\w.+−-])'
+  right_boundary: '(?![\w.:])'
+  unit: '(?:seconds?|s|秒)'
+  patterns:
+    start_end: '\bSTART\s*=\s*(?P<start>{number})\s*,\s*END\s*=\s*(?P<end>{number}){right}'
+    natural_language: '\b(?:starts|begins)\s+at\s+(?P<start>{number})\s+seconds?\b[^\d\n;]*?\bends\s+at\s+(?P<end>{number})\s+seconds?\b'
+    from_to: '\bfrom\s+(?P<start>{number})\s+to\s+(?P<end>{number})\s+seconds?\b'
+    dash_range: '{left}(?P<start>{number})\s*[–-]\s*(?P<end>{number})\s*{unit}(?!\w)'
+    explicit_seconds_range: '\b(?:at|from)\s+(?P<start>{number})\s*{unit}\s+to\s+(?P<end>{number})\s*{unit}(?!\w)'
+    explicit_start_end_respectively: '\bstart\s+and\s+end\s+times\s+are\s+(?P<start>{number})\s*{unit}\s+and\s+(?P<end>{number})\s*{unit}\s*,?\s*respectively\b'
+  clock_pattern: '\d+(?:\.\d+)?\s*:\s*\d+'
+  missing_unit_patterns:
+    - '\b(?:starts|begins)\s+at\s+(?P<start>{number})(?:\s+seconds?)?\s*[^\d\n;]*?\bends\s+at\s+(?P<end>{number})(?:\s+seconds?)?'
+    - '\bfrom\s+(?P<start>{number})\s+to\s+(?P<end>{number})(?:\s+seconds?)?'
+    - '{left}(?P<start>{number})\s*[–-]\s*(?P<end>{number})'
+    - '\b(?:at|from)\s+(?P<start>{number})(?:\s*{unit})?\s+to\s+(?P<end>{number})(?:\s*{unit})?'
+    - '\bstart\s+and\s+end\s+times\s+are\s+(?P<start>{number})(?:\s*{unit})?\s+and\s+(?P<end>{number})(?:\s*{unit})?\s*,?\s*respectively\b'
+  time_value_pattern: '{left}{number}\s*{unit}(?!\w)|\b(?:START|END)\s*=\s*{number}{right}'
+  # Multiple applicable failures are retained, primary reason follows this order.
+  failure_priority: [ambiguous_clock, multi_interval, missing_unit, single_point, no_interval]
+  layer_a_failure_codes: [no_interval, single_point, multi_interval, missing_unit, ambiguous_clock]
+  layer_b_codes: [valid, reverse_order, zero_duration]
+  required_families: [start_end, natural_language, from_to, dash_range]
+  distribution_layer_b: [valid, zero_duration]

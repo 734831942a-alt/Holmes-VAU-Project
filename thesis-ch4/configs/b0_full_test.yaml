@@ -1,0 +1,67 @@
+spec: specs/SPEC-04-A2.md
+spec_sha256: 2a328ba1d517dfb49ab7a602365a43d5a4c499d79da511ca48770400bc988959
+a1_commit: f22c24c3427f53b21c9b2f672e4992a31d6ab97e
+a1_baseline: results/spec04/a1-before.json
+generation_config: configs/b0_selfdata.yaml
+measurement_config: configs/b0_reparse_v2.yaml
+expected_test: 932
+expected_old_overlap: 312
+baseline_protected_count: 28
+protected_globs: [results/spec04/reparse_v2/*, results/b0/*]
+protected_files:
+  - results/spec04/accept-04-a1.json
+  - results/spec04/tests-04-a1.json
+  - eval/generation_evidence.py
+  - eval/reparse_v2.py
+  - configs/b0_reparse_v2.yaml
+  - specs/SPEC-04-A1.md
+  - specs/SPEC-04-A2.md
+  - data/manifest.jsonl
+  - data/splits.json
+  - data/test-lock.json
+  - results/spec04/timeline.jsonl
+  - configs/data.yaml
+  - results/spec04/a1-before.json
+generation_dir: results/b0_full_test
+measurement_dir: results/spec04/b0_full_test
+files:
+  before: protected-before.json
+  after: protected-after.json
+  run: run.json
+  launch: launch.json
+  worker_lock: worker.lock
+  predictions: predictions.jsonl
+  attempts: attempts.jsonl
+  exceptions: exceptions.jsonl
+  state: state.json
+  metrics: metrics.json
+  parsed: parsed.json
+  reproducibility: reproducibility.json
+  acceptance: accept-04-a2.json
+  tests: tests.json
+  report: report.md
+  log: run.log
+  exit: run.exit
+  authorization: authorization.md
+  checkpoint_dir: checkpoints
+  review_dir: reviews
+checkpoint_name: 'checkpoint-{n:04d}.json'
+review_name: 'review-{n:04d}.json'
+issue_dir: issues
+issue_name: '04a2-{slug}.md'
+old_predictions: results/b0/predictions.jsonl
+source_files: [eval/b0_full_test.py, configs/b0_full_test.yaml]
+warmup_n: 16
+warmup_min_categories: 2
+checkpoint_every: 50
+raw_sample_on_pause: 8
+review_poll_sec: 2
+progress_every: 1
+stop_reasons: [eos, max_new_tokens, other]
+monitor_thresholds:
+  generation_exception_rate: {operator: gt, value: 0}
+  evidence_malformed_rate: {operator: gt, value: 0}
+  empty_raw_output_rate: {operator: ge, value: 0.50}
+  truncated_rate: {operator: ge, value: 0.95}
+generation_keys: [max_new_tokens, temperature, num_frames, input_size, max_tiles_per_frame]
+evidence_fields: [stop_reason, generated_token_count, generated_token_ids, max_new_tokens, last_token_is_eos, truncated, input_prefix_token_count, output_token_count, eos_token_id, input_prefix_source]

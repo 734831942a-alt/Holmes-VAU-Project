@@ -1,0 +1,26 @@
+run_config: configs/b0_full_test.yaml
+test_results: results/spec04/b0_full_test/tests.json
+expected_checkpoints: [16, 66, 116, 166, 216, 266, 316, 366, 416, 466, 516, 566, 616, 666, 716, 766, 816, 866, 916, 932]
+ordinary_token: 7
+eos_token: 99
+short_ids: [7, 99]
+raw_output: 'No anomalous event is identified.'
+duration_sec: 60
+frames_seen: 12
+positive_error_rate: 0.01
+below_empty_rate: 0.49
+below_truncated_rate: 0.94
+category_fixture: [二轮车辆闯入, 占道施工, 多车事故, 异常停车, 抛洒物, 拥堵]
+mock_video_prefix: fixture
+mock_count: 32
+timeline_pts: [0, 1000, 2000]
+time_base: '1/1000'
+mock_indices: [0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2]
+fixture_names:
+  configuration: full.yaml
+  generation_config: generation.yaml
+  generation_dir: generation
+  measurement_dir: measurement
+  issues: issues
+  timeline: timeline.jsonl
+  raw_video: fixture.mp4

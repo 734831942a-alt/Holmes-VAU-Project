@@ -1,0 +1,21 @@
+{
+  "scope_notice": "312/932 顺序前缀、类别仅二轮 221 + 施工 91、不可外推全 test",
+  "measurement_version": "SPEC-04-A1/reparse_v2",
+  "configuration_sha256": "e81fca58461392aa812413f73d1481806872f4eb2dbb5ce1e17ccbae19d4de1c",
+  "spec_sha256": "c0b1e902ad2783a542b55f86a8c1a39e71527a5d690bdc0386710f315c13f2d4",
+  "model_generation_calls": 0,
+  "layer_a": {
+    "no_interval": 117,
+    "single_point": 5,
+    "multi_interval": 0,
+    "missing_unit": 1,
+    "ambiguous_clock": 1
+  },
+  "layer_b": {
+    "valid": 188,
+    "reverse_order": 0,
+    "zero_duration": 0
+  },
+  "layer_a_pass_count": 188,
+  "note": "Layer A primary reasons are exclusive; all detected reasons remain on each record."
+}
